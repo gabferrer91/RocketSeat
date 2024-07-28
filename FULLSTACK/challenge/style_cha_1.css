@@ -1,7 +1,9 @@
+/* tudo que consta na página, unica definição é o fundo preto */
 body {
     background-color: black;
 }
 
+/* parte mais escura arredondada */
 #pagina {
     box-sizing: border-box;
     width: 1260px;                                  /* figma */
@@ -11,10 +13,30 @@ body {
     margin: 40px auto;                              /* 1º é espacamento de cima e de baixo (48). 2º é da esq e dir (auto) */
 }
 
-* {
+/* parte branca, com textos e imgs */
+#content {
+    background-color: #F5F4F0;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+#sessao-um { 
+    padding-left: 28px;
+    padding-right: 20px;
+}
+
+#linha {
+    background-color: rgb(165, 165, 165);
+    width: 100%; /* Largura da linha */
+    height: 2px; /* Altura da linha */
+}
+
+/* * {
+    margin-left: 20px;
+    margin-right: 20px;
+} */
 
 
 .porange {
@@ -24,23 +46,10 @@ body {
     padding-top: 40px;
 }
 
-main{ 
-    /* padding: 72px; */
-    margin: auto;
-}
 
-.foto {
-height: 60000;    
-width: 10000;
-}
 
 .toptitle {
     font-size: 36px;
-}
-
-#content {
-    background-color: #F5F4F0;
-    margin: 30px 40px;
 }
 
 .container {
@@ -54,11 +63,31 @@ img{
 }
 
 .general-paragraf {
-    font-size: 21px;
+    font-size: 18px;
 }
 
 
 #topic-one {
-    font-size: 21px;
+    font-size: 18px;
     color: #0C51A7;
+    line-height: 1px;
+}
+
+#topic-two {
+    line-height: 1px;
+    color: #591B98;
+}
+
+#topic-three {
+    line-height: 1px;
+    color: #E5245E;
+}
+
+#topic-four {
+    line-height: 1px;
+    color: #E95E10;
+}
+
+footer img {
+    vertical-align: middle;
 }

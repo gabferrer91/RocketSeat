@@ -1,0 +1,64 @@
+body {
+    background-color: black;
+}
+
+#pagina {
+    box-sizing: border-box;
+    width: 1260px;                                  /* figma */
+    padding: 24px;                                  /* figma */
+    background-color: #333333;                    /* figma */
+    border-radius: 24px;                            /* figma */
+    margin: 40px auto;                              /* 1º é espacamento de cima e de baixo (48). 2º é da esq e dir (auto) */
+}
+
+* {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.porange {
+    color: #E1624F;
+    font-size: 16pt;
+    font-family: 'Open Sans';
+    padding-top: 40px;
+}
+
+main{ 
+    /* padding: 72px; */
+    margin: auto;
+}
+
+.foto {
+height: 60000;    
+width: 10000;
+}
+
+.toptitle {
+    font-size: 36px;
+}
+
+#content {
+    background-color: #F5F4F0;
+    margin: 30px 40px;
+}
+
+.container {
+    display: grid;
+    justify-items: center;
+}
+
+img{
+    /* height: 100px; */
+    width: auto;
+}
+
+.general-paragraf {
+    font-size: 21px;
+}
+
+
+#topic-one {
+    font-size: 21px;
+    color: #0C51A7;
+}

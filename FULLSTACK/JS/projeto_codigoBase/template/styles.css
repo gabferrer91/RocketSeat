@@ -106,3 +106,9 @@ ul {
 .input-error:focus {
   border-color: #e21a43;
 }
+
+.elemento-oculto {
+  display:none
+}
+
+

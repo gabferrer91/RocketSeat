@@ -1,0 +1,55 @@
+body {
+    box-sizing: border-box;
+    border: solid rgb(206, 205, 205);
+}
+
+#saudacao {
+    display: block;           /*block */
+    border:solid green ;    /*coloca borda nas extremidades do elemento*/
+    font-size: 50px;          /*tamanho da fonte do texto*/
+    height: 50px;             /*altura*/
+    width: 420px;             /*largura*/
+    padding: 10px;            /*espaco interno, entre conteudo do elemento e suas bordas*/
+    margin: 00px;             /*espaco externo, entre o elemento e demais elementos*/
+    text-align: center;       /*alinhamento do texto na caixa*/
+}
+
+.div1 {
+    display: inline-block;
+    border: solid;
+    border-width: 2.5px;
+    border-radius: 24px;
+    padding: 8pt 16pt 8pt 16pt;    /*cima direita baixo esquerda*/
+    margin: 5pt;
+    width: 86px;
+    text-align: center;
+}
+
+.span1 {
+    display: inline-block;
+    border: solid;
+    margin: 10px 20px;
+    width: 200px;
+    
+}
+
+#divspan {
+    display: inline-block;
+    border: solid;
+    border-radius: 12px;
+}
+
+p {
+    font-size: 12pt;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.teste {
+    border: solid;
+    border-color: black;
+    border-width: 1.5px;
+    margin: 10px;
+    padding: 10px;
+    /* border-style: dashed; */
+}

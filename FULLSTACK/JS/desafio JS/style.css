@@ -1,0 +1,19 @@
+.paragrafo {
+    color: brown;
+    font-size: 99pt;
+}
+
+.form-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente no centro */
+    margin: 20px;
+}
+
+textarea {
+    resize: none; /* Desativa o redimensionamento do textarea */
+    margin-right: 10px; /* Espaço entre o textarea e o botão */
+}
+
+input[type="submit"] {
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}

@@ -80,5 +80,79 @@
 // input.classList.remove("input-error");     // Remove estilo CSS à classe.
 // input.classList.toggle("input-error");     // Se tem, tira. Se não tem, coloca.
 
-const botao = document.querySelector('#btn');     // Acessando o botão.
-botao.style.backgroundColor = 'red';
+// const botao = document.querySelector('#btn');     // Acessando o botão.
+// botao.style.backgroundColor = 'red';
+
+// const convidados = document.querySelector('ul');
+
+// console.log(convidados);
+
+// const novoConvidado = document.createElement('li');
+// const nomeConvidado = document.createElement('span');
+// nomeConvidado.textContent = 'Ricardo';
+// console.log(nomeConvidado.textContent);
+
+// novoConvidado.append(nomeConvidado);
+// convidados.append(novoConvidado);
+// console.log(convidados);
+
+
+
+// const listaConvidados = document.querySelector('ul');   // busca a lista ul
+
+// console.log(listaConvidados);
+
+
+// const novoItem = document.createElement('li');          // cria um elem li
+// const novoConvidado = document.createElement('span');   // cria um elem span
+
+// novoConvidado.textContent = 'Ricardo';                  // seta o texto no span
+
+// novoItem.append(novoConvidado);                         // coloca span dentro de li
+// listaConvidados.append(novoItem);                       // coloca li dentro de ul
+
+// novoItem.classList = 'guest';                           // seta a classe de li 
+
+// console.log(listaConvidados);
+
+// window.addEventListener('load', () => {
+//     console.log('pagina carregada')
+// })
+
+
+
+
+
+
+// window.addEventListener('click', (evento) => {
+    
+//     // previne o comportamento original de um elemento (como recarregamento de pag ao clicar em botao)
+//     evento.preventDefault()
+
+//     // retorna todas as infos do evento
+//     console.log(evento)
+
+//     // retorna o elemento clicado no evento
+//     console.log(evento.target)
+// })
+
+
+window.addEventListener('click', escutar);
+
+function escutar (evento) {
+    // previne o comportamento original de um elemento (como recarregamento de pag ao clicar em botao)
+    evento.preventDefault();
+
+    // retorna todas as infos do evento
+    console.log(evento);
+
+    // retorna o elemento clicado no evento
+    console.log(evento.target);
+
+    // retorna o texto do elemento clicado no evento
+    console.log(evento.target.textContent);
+
+};
+
+
+

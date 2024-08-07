@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    color: #34355B;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: linear-gradient(123deg, #190361 0%, #BB00FF 100%);
+    display: grid;
+    place-items: center;
+    height: 100vh;   /* Faz com que o body ocupe toda a altura da viewport */
+}
+
+main {
+    width: 428px;
+    height: 424px;
+    background-color: rgb(255, 247, 247);
+    box-shadow: 0 5px 25px rgba(00, 20, 50, 0.8);
+    border-radius: 12px;
+    margin-top: 30px;
+    align-items: center;
+    align-content: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24pt;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.biscuit {
+    background-image: url('assets/fortune-cookie.png');
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    margin-top: 30px;
+    margin: auto auto;      /*pra centralizar o biscoito no meio  da div*/
+    margin-top: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+#open {
+    height: 520px;
+}
+
+.message {
+    background-color: #E4EDF1;
+    height: 107px;
+    width: 293px;
+    box-shadow: 0 2px 5px rgba(00, 20, 50, 0.2);
+    align-content: center;
+    margin: auto auto;
+    margin-top: 20px;
+}
+
+.messContent {
+        font-family: "Dancing Script", cursive;
+        color: black;
+        font-size: 24px;
+        margin-top: 10px;
+}
+
+.openedCookie{
+    background-image: url('assets/opened-cookie.png');
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    margin: auto auto;
+}
+
+#btnDiv {
+    display: grid;
+}
+
+#again {
+    font-size: 16px;
+    font-family: 'DM Sans', sans-serif;
+    color: rgb(243, 235, 235);
+    background: #FF9500;
+    border-radius: 8px;
+    height: 52px;
+    width: 174px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: none;
+    box-shadow: 0 2px 5px rgba(00, 20, 50, 0.8);
+    margin: auto auto;
+}
+
+#again:hover {
+    background-color: #b36801;
+    margin: auto auto;
+}

@@ -1,0 +1,84 @@
+* {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    color: #3F3D56;
+}
+
+h1 {
+    font-size: 32pt;
+}
+
+a {
+    text-decoration: none;          /*tira o sublinhado natural do hyperlink do rodape*/
+} 
+
+a:hover {
+    text-decoration: underline;     /*coloca o sublinhado do hyperlink do rodape quando o mouse passa por cima*/
+} 
+
+
+/*abaixo, flex+column+center ajudaram a centralizar tanto main como footer e imagem-container no meio da página*/
+body {
+    background: linear-gradient(90deg, #b1b1b1, #ffffff);
+    margin: 0; /* Remove o espaço padrão do navegador */
+    display: flex; /* Use flexbox para centralizar elementos */
+    flex-direction: column; /* Alinha os elementos na direção da coluna */
+    align-items: center; /* Centraliza o conteúdo na horizontal */
+}
+
+main {
+    text-align: center;        /*importante pra alinhar ao centro da pág*/
+    width: 626px;
+    height: 486px;
+}
+
+#s1 {
+    color: #EE24FF;
+    font-weight: bold;
+}
+
+.s2 {
+    font-weight: bold;
+    color: #3F3D56;
+}
+
+p {
+    color: #828282;
+    font-size: 15pt;
+}
+
+#flut{
+    font-weight: bold;
+    color: #828282;
+}
+
+
+.footer {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 15pt;
+}
+
+#hline {
+    width: 391px;
+    height: 0px;
+    border: 1px #8d8d8d solid;
+    margin: auto;
+}
+
+.footer a + a {
+    margin-left: 28px;
+}
+
+.imagem-container {
+    margin-top: 50px;
+    width: 100%; /* Largura da div da imagem */
+    text-align: center; /* Centraliza o conteúdo dentro da div */
+}
+
+.imagem-container img {
+    width: 12000px; /* Largura da imagem */
+    max-width: 100%; /* Para ser responsiva em telas menores */
+}

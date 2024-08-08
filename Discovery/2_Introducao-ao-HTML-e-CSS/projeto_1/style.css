@@ -1,0 +1,62 @@
+*{
+    font-family: "Inter", sans-serif;
+}
+
+html{
+    height: 100%; /* Garante que o body ocupe 100% da altura da janela */
+    margin: 0; /* Remove margens padrão do body */
+    display: flex; /* Usado para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #f0f0f0; /* Cor de fundo (opcional) */
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+main{
+    text-align: center;
+    width: 620px;
+    margin: auto;
+}
+
+#topPic {
+    width: 300px;
+    height: auto;
+    margin-bottom: 27px;
+}
+
+p {
+    color: #7D7987;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+span{color: #FF9900;}
+
+#balls{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+.hline {
+    width: 620px;
+    height: 0px;
+    border: 1px #a3a3a373 solid;
+    margin-top: 45px;
+}
+
+a {
+    color: #ff9900;
+    font-size: 15px;
+}
+
+#footer a + a {
+    margin-left: 28px;
+    /* margin-right: 14px; ou 14 em left e right*/
+}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria</title>
+    <style>
+        h1 {text-align: center;}
+        form {
+            border: solid 1px;
+            margin: 10px 30%;
+            padding: 10px;
+        }
+        .text {display: flex;}
+        #textId {margin: auto;}
+    </style>
+</head>
+
+<body>
+
+    <div id="formularios1">
+    <h1>Como funcionam os formulários</h1>
+    <form>
+        <label for="firstInput">Input de texto</label>
+        <input type="text" name="username" id="firstInput"  placeholder="aqui um texto qualquer">
+        
+        <br><br>
+        <label for="checkBox1">Checkbox: </label>
+        <input type="checkbox" name="chkbOne" id="checkBox1">
+
+        <br><br>
+        <label for="pass">Input de senha</label>
+        <input type="password" placeholder="Digite sua senha" id="pass" required>
+
+        <br><br>
+        <label for="email">Input de email</label>
+        <input type="email" placeholder="example@domain.com" id="email" required>
+
+        <br><br>
+        <label for="dataId">Input de data</label>
+        <input type="date" name="data" id="dataId">
+
+        <br><br>
+        <label for="fileId">Input de arquivo</label>
+        <input type="file" name="file" id="fileId">
+
+        <br><br>
+        <label for="radioId1">Inputs de radio 1</label>
+        <input type="radio" name="radio" id="radioId1">
+        <br>
+        <label for="radioId2">Inputs de radio 2</label>
+        <input type="radio" name="radio" id="radioId2">
+        <br>
+        <label for="radioId3">Inputs de radio 3</label>
+        <input type="radio" name="radio" id="radioId3">
+
+        <br><br>
+        <label for="selectId">Opção de select (lista suspensa)</label>        
+        <select name="select" id="selectId">
+            <option value="music">Música</option>
+            <option value="movie">Filme</option>
+            <option value="magazine">Revista</option>
+            <option value="radio">Rádio</option>
+        </select>
+
+        <br><br>
+        <div class="text">
+            <label for="textId"></label>
+            <textarea name="text" id="textId"
+                    required placeholder="Aqui um campo de texto obrigatório (required)."
+                    rows="5" cols="50"></textarea>
+        </div>
+
+        <br><br>
+        <label for="sendId">Input de submit</label>
+        <input type="submit" value="send" id="sendId">
+
+    </form>
+</div>
+
+<br> <hr> <br>
+
+<div id="formularios2">
+    <form action="" method="GET">
+        <input type="text" name="umNome" placeholder="Conteúdo aqui...">
+        <input type="hidden" name="nomeDoHidden" value="valor-do-input-hidden">
+        <input type="submit" value="enviar form">
+    </form>
+</div>
+
+</body>
+</html>

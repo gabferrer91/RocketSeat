@@ -1,0 +1,101 @@
+<!-- https://www.figma.com/design/8PTh1fNeBGSp1oiJaf6zme/Stage-03---Formul%C3%A1rio-intermedi%C3%A1rio-(Copy)?node-id=0-1&t=jObD4buzG5NUqe0W-0 -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>MENTORIA</title>
+</head>
+<body>
+    
+    <div class="page">
+        <header>
+            <h1>MENTORIA</h1>
+            <p>Preencha o formulário abaixo para<br>agendar sua mentoria</p>
+        </header>
+
+        <form id="my-form">
+            <div class="field">
+                <fieldset>
+                    <legend>INFORMAÇÕES PESSOAIS</legend>
+                    <div class="hline"></div>
+
+                    <div class="fullName">
+                        <div class="input-wrapper">
+                            <label for="nameId">Nome</label>
+                            <input type="text" id="nameId">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="surnameId">Sobrenome</label>
+                            <input type="text" id="surnameId">
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="emailId">E-mail <span>(digite um e-mail válido)</span></label>
+                        <input type="email" id="emailId" required>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="passId">E-mail <span>(mínimo de 6 caracteres)</span></label>
+                        <input type="password" id="passId" minlength="6" required>
+                    </div>
+
+                    <legend>INFORMAÇÕES DO MENTOR</legend>
+                    <div class="hline"></div>
+                    <div class="input-wrapper">
+                        <label for="coachNameId">Nome do seu mentor <span>(só o primeiro nome)</span></label>
+                        <input type="text" id="coachNameId">
+                    </div>
+                    <legend>SEUS HORÁRIOS DISPONÍVEIS</legend>
+                    <div class="hline"></div>
+
+                    <legend class="legTwo">PRIMEIRA MENTORIA</legend>
+                    <div class="firstMentor">
+                        <div class="input-wrapper">
+                            <label for="dateId">Data <span>(DD/MM/AAAA)</span></label>
+                            <input type="date" id="dateId">
+                        </div>
+                        <div class="timeContent">
+                            <div class="input-wrapper">
+                                <label for="begId">Das</label>
+                                <input type="time" id="begId">
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="endId">Até</label>
+                                <input type="time" id="endId">
+                            </div>
+                        </div>
+                    </div>
+
+                    <legend class="legTwo">SEGUNDA MENTORIA</legend>
+                    <div class="firstMentor">
+                        <div class="input-wrapper">
+                            <label for="dateId">Data <span>(DD/MM/AAAA)</span></label>
+                            <input type="date" id="dateId">
+                        </div>
+                        <div class="timeContent">
+                            <div class="input-wrapper">
+                                <label for="begId">Das</label>
+                                <input type="time" id="begId">
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="endId">Até</label>
+                                <input type="time" id="endId">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+        <footer>
+            <input class="sendForm" type="submit" value="SALVAR" form="my-form">
+        </footer>
+    </div>
+</body>
+</html>

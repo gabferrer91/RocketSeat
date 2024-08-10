@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #535971;
+}
+
+body {
+    display: flex;
+    width: 1440px;
+    background: #E6E6F0;
+}
+
+.page {
+    margin: auto;
+}
+
+body::before {
+    background: #535971;
+    border: #535971 2px solid;
+    content: '';
+    width: 100%;
+    height: 436px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header {
+    margin: 140px auto 58px;
+}
+
+h1 {
+    margin: 18px auto;
+    color: #FFFFFF;
+    font-family: "Staatliches", sans-serif;
+    font-size: 48px;
+    font-weight: lighter;
+}
+
+header p {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+form {
+    width: 750px;
+    background: white;
+    border-radius: 8px 8px 0 0;
+    border: none;
+    padding: 64px;
+}
+
+.field fieldset {
+    border: none;
+}
+
+legend {
+    font-family: "Staatliches", sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 34px;
+    margin-top: 30px;
+}
+
+.hline {
+    border-bottom: 1px solid #E6E6F0;
+    width: 100%;
+    margin: 16px auto 36px auto;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.fullName {
+    display: flex;
+    gap: 22px;
+}
+
+input {
+    border: #E6E6F0 1px solid;
+    background: #FAFAFC;
+    border-radius: 8px;
+    height: 56px;
+}
+
+label:hover, label span:hover {
+    color: #535971;
+}
+
+label span {
+    font-size: 12px;
+    color: #C1BCCC;
+    margin-left: 9px;
+}
+
+.legTwo {
+    font-size: 20px;
+    line-height: 34px;
+    margin: 16px auto 11px auto;
+}
+
+.firstMentor {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+}
+
+.timeContent {
+    display: flex;
+    gap: 10px;
+    width: 400px;
+}
+
+footer {
+    background: #535971;
+    border-radius: 0 0 8px 8px;
+    height: 160px;
+    padding: 52px 71px;
+    text-align-last: center;
+}
+
+.sendForm {
+    background: #FF5374;
+    color: white;
+    font-size: 20px;
+    font-family: "Staatliches", sans-serif;
+    border-radius: 20px;
+    border: none;
+    width: 100%;
+}
+
+.sendForm:hover {
+    background: #a12740;
+}

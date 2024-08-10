@@ -1,0 +1,206 @@
+* {
+    font-family: "Archivo", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1440px;
+    height: 1940px;
+    background-color: #D9D9D9;
+}
+
+/* Criando a barra preta:*/
+body::before {                    /* body::before é pseudo class, cria um elemento html antes (do body) */
+    content: '';                  /* obrigatório definir o conteúdo quando usar pseudo class */
+    background-color: black;    /* defininido a cor da barra */
+    width: 100%;                  /* largura total */
+    height: 368px;
+    position: absolute;           /* definindo a posição do elemento */
+    left: 0;                      /* garantindo que começe na extrema esquerda */
+    top: 0;                       /* garantindo que comece no topo */
+    z-index: -1;                  /* fazendo que fique na layer de trás do texto */
+}
+
+.page {
+    width: 736px;
+    margin: auto;
+}
+
+header {
+    width: 319px;
+    margin-top: 30px;
+}
+
+header h1 {
+    color: white;
+    font-weight: bold;
+    line-height: 42px;
+    padding-bottom: 24px;
+}
+
+header p {
+    color: #42D3FF;
+    font-family: "Poppins";
+}
+
+form {
+    background-color: #fafafc;
+    width: 736px;
+    margin: auto;
+    margin-top: 42px;
+    border-radius: 8px 8px 0 0;
+    min-height: 300px;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+fieldset {
+    border: none;
+}
+
+.fieldset-wrapper {
+    display: flex;
+    flex-direction: column;                  /*flex+column faz a organização ser linha a linha os componentes do fieldset, as divs de wrapper de cada input. e o gap de 24 distancia as divs em 24px*/
+    gap: 24px;
+}
+
+fieldset legend {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    border-bottom: 1px solid #e6e6f0;
+    width: 100%;
+    padding-bottom: 16px;
+}
+
+.input-wrapper {margin-top: 24px;}
+
+.input-wrapper label {
+    color: #4E4958;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.input-wrapper span {
+    color: #C1BCCC;
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 12px;
+}
+
+.inputClass {
+    border: solid 1px;
+    border-color: #E6E6F0;
+    background-color: #FAFAFC;
+    border-radius: 8px;
+    width: 100%;
+    height: 56px;
+    margin-top: 8px;
+    padding: 0 24px;
+    color: #4E4958;
+}
+
+.input-wrapper textarea {
+    padding: 12px 24px;
+    height: 200px;
+    width: 100%;
+    max-width: 582px;
+    min-width: 582px;
+}
+
+label span:hover {
+    color: #38343f;
+}
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /* https://yoksel.github.io/url-encoder/ */
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 24px top 50%;
+}
+
+#checkLabel {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    gap: 16px;
+}
+
+#checkDiv {
+    position: relative;
+}
+
+#checkboxId {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    opacity: 0;
+}
+
+#checkLabel::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='24' height='24' rx='8' fill='%23FAFAFC' stroke='%23E6E6F0'/%3E%3C/svg%3E");
+    content: "";
+    width: 24px;
+    height: 24px;
+    border: 1px solid #e6e6f0;
+    border-radius: 8px;
+}
+
+#checkboxId:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+}
+
+#checkboxId:focus + label::before {
+    outline: 3px solid black;
+}
+
+#dateEvent{
+    width: 312px;
+}
+
+#hourInitEvent{
+    width: 120px;
+}
+
+#hourEndEvent{
+    width: 120px;
+}
+
+#datetimeField {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background: #F0F0F4;
+    padding: 40px 72px;
+    border-radius: 0 0 8px 8px;
+    border-top: solid #bbbbbd31 1px;
+}
+
+.submit {
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    border: none;
+    background: #04D361;
+    color: white;
+}
+
+.submit:hover {
+    background: #01a34a;
+}
+
+/* pra usar quando houver input required */
+input:invalid {
+    border: 2px solid red;
+}

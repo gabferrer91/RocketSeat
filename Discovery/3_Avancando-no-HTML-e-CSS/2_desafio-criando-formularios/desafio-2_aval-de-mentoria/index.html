@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>AVALIAÇÃO DE MENTORIA</title>
+</head>
+<body>
+    
+    <div class="page">
+        <header>
+            <h1>AVALIE SUA MENTORIA</h1>
+            <p>Chegou a hora de avaliar seu mentor. Bora lá?</p>
+            <img src="assets/imgCentral.png" alt="estrelas de avaliação">
+        </header>
+
+        <fieldset class="fieldset-1">                
+            <h2>INFORMAÇÕES PESSOAIS</h2>
+        </fieldset>
+        
+        <form id="avaliation">
+            <div class="nameBlock">
+                <div class="nameField">
+                    <label for="nameId">Nome</label>
+                    <input type="text" id="nameId">
+                </div>
+                <div class="nameField">
+                    <label for="surnameId">Sobrenome</label>
+                    <input type="text" id="surnameId">
+                </div>
+            </div>
+            <div class="email">
+                <label for="emailId">Email <span>(digite um email válido)</span></label>
+                <input type="email" id="emailId">
+            </div>
+
+            <div class="subtitle">
+                <p>INFORMAÇÕES DO MENTOR</p>
+            </div>
+                
+            <div class="mentor">
+                <label for="mentorId">Selecione quem foi o seu mentor</label>
+                <select name="mentorList" id="mentorId">
+                    <option value="Carlos">Carlos</option>
+                    <option value="Emílio">Emílio</option>
+                    <option value="Claudinho">Claudinho</option>
+                    <option value="Bebeto">Bebeto</option>
+                </select>
+            </div>
+
+            <div class="mentor">
+                <label for="feedId">Feedback sobre o seu mentor</label>
+                <textarea name="feedback" id="feedId"></textarea>
+                </select>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" name="chechDuvidas" id="checkId">
+                <label for="checkId">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+            </div>
+
+            <div class="subtitle">
+                <p>AGENDANDO PRÓXIMA MENTORIA</p>
+            </div>
+
+            <div class="date-hour">
+                <div class="label-input-col">
+                    <label for="dataId">Data <span>(DD/MM/AAAA)</span></label>
+                    <input type="date" name="scheduleDate" id="dataId">
+                </div>
+                <div class="label-input-col">
+                    <label for="fromId">Das</label>
+                    <input type="time" name="timeStart" id="fromId">
+                </div>
+                <div class="label-input-col">
+                    <label for="toId">Até</label>
+                    <input type="time" name="timeEnd" id="toId">
+                </div>
+            </div>
+
+            <input type="submit" value="SALVAR" form="avaliation" id="btnSend">
+        </form>
+
+    </div>
+
+</body>
+</html>

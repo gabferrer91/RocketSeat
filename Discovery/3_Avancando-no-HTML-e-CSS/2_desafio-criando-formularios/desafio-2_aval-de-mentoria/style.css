@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: #4E4958;
+    font-family: "Poppins", sans-serif;
+    /* font-family: "Staatliches", sans-serif; */
+}
+
+body {
+    background: #BFD7E4;
+    display: flex;
+    width: 1440px;
+}
+
+.page {
+    margin: auto;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36;
+    color: #FFFFFF;
+    font-family: "Staatliches", sans-serif;
+    margin-top: 107px;
+    font-weight: 200;
+}
+
+header p {
+    font-size: 16;
+    color: #FFFFFF;
+}
+
+header img {
+    margin-top: 23px;
+}
+
+html::before {
+    background: #293241;
+    width: 100%;
+    height: 465px;
+    content: '';
+    display: grid;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fieldset-1 {
+    background: #F67669;
+    border: none;
+    width: 750px;
+    height: 133px;
+    border-radius: 20px 20px 0 0;
+    margin-top: 31px;
+    display: flex;
+    padding: auto;
+}
+
+.fieldset-1 h2 {
+    font-family: "Staatliches", sans-serif;
+    color: white;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: lighter;
+    margin: auto;
+}
+
+form {
+    background: #ffffff;
+    padding: 31px 64px;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 12px;
+}
+
+label {
+    font-size: 14px;
+    margin-top: 15.87px;
+}
+
+.nameBlock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameField input {
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFC;
+    border: solid 1px #E6E6F0;
+    border-radius: 8px;
+    height: 55.53px;
+    width: 300px;
+    margin-top: 7.93px;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+}
+
+.email label {
+    
+}
+
+
+.email input {
+    background: #FAFAFC;
+    border: solid 1px #E6E6F0;
+    border-radius: 8px;
+    height: 55.53px;
+    width: 100%;
+}
+
+span {
+    margin-left: 10px;
+    font-size: 12px;   
+    color: #C1BCCC;
+}
+
+span:hover {
+    color: #887ba3;
+}
+
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #E6E6F0;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.subtitle p {
+    color: #4E4958;
+    font-size: 24px;
+    line-height: 34px;
+    font-family: "Staatliches", sans-serif;
+    margin: auto;
+    margin-top: 32px;
+}
+
+.mentor {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    background: #FAFAFC;
+    border: solid 1px #E6E6F0;
+    border-radius: 8px;
+    height: 55.53px;
+    width: 300px;
+    margin-top: 7.93px;
+}
+
+.mentor {
+    margin-top: 16px;
+}
+
+textarea {
+    background: #FAFAFC;
+    border: solid 1px #E6E6F0;
+    border-radius: 8px;
+    min-height: 166px;
+    max-height: 166px;
+    min-width: 622px;
+    max-width: 622px;
+    margin-top: 7.93px;
+}
+
+.check {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.check input {
+    height: 24px;
+    width: 24px;
+    /* position: absolute; */
+    /* opacity: 0; */
+}
+
+.check label {
+    display: contents;
+}
+
+.label-input-col {
+    display: flex;
+    flex-direction: column;   
+}
+
+.date-hour {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.date-hour input {
+    background: #FAFAFC;
+    border: solid 1px #E6E6F0;
+    border-radius: 8px;
+    height: 55.53px;
+}
+
+.date-hour .label-input-col:first-child input {
+    width: 300px;
+}
+
+.date-hour .label-input-col:nth-child(2) input, .date-hour .label-input-col:nth-child(3) input {
+    width: 140px;
+}
+
+#btnSend {
+    background: #F67669;
+    width: 100%;
+    height: 51px;
+    border: none;
+    border-radius: 8px;
+    font-family: "Staatliches", sans-serif;
+    font-size: 20px;
+    margin: 76px auto;
+    color: white;
+}

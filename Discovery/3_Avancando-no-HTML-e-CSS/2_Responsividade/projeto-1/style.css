@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #090039;
+    font-family: "Epilogue", sans-serif;
+}
+
+
+/*setando a porcentagem em 62.5% de 16px que é o padrão do navegador. Logo, 10px que facilita trabalhar com 
+a medida relativa 'rem': Se são 16px, em rem passa a ser 1.6rem. Isso ajuda na acessibilidade do usuário mobile.
+*/
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background: #ECE9FD;
+    padding: 6rem 2.3rem 6.6rem;      /* cima lados baixo */
+}
+
+main {
+    margin: auto;
+    max-width: 33rem;
+}
+
+.top {
+    color: #7158EF;
+    font-weight: 500;
+    line-height: 3.2rem;
+    letter-spacing: 3px;
+}
+
+h1 {
+    line-height: 4.8rem;
+    font-size: 4rem;
+}
+
+p {
+    color: rgba(10, 0, 57, 0.64);
+    line-height: 3.2rem;
+    font-size: 1.6rem;
+}
+
+.link{
+    margin: 3.2rem auto 7rem;
+    line-height: 3.2rem;
+    font-size: 1.6rem;
+} 
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1c00bb;
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 3.2rem;
+    max-width: 30rem;
+    display: flex;                     /*entre o o span (nº da lista) e o próprio texto da li*/
+    align-items: center;
+    gap: 2.8rem;
+}
+
+ul li span {
+    font-size: 7.2rem;
+    font-weight: bolder;
+    margin: 3.2rem 2.6rem 3.2rem 0;
+}
+
+
+/*
+O trecho de código apresentado abaixo '@media' é uma regra CSS que utiliza a consulta de mídia (media query) 
+para aplicar estilos específicos com base na largura da janela de visualização (viewport). 
+Ou seja, o metadado viewport deve estar presente no arquivo html. Ainda, pode-se checar o
+tamanho do display no navegador em F12 e alterando o dispositivo.
+*/
+@media (min-width:40em) {       /* ao atingir um mínimo de 40em, que é uma unidade de medida relativa à fonte, os comandos de estilo são disparados */
+    body{
+        display: flex;
+    }
+
+    main {
+        margin: auto;
+        display: flex;
+        max-width: 144rem;
+        gap: 11rem;
+        justify-content: center;
+    }
+
+    .part1 {
+        max-width: 48.4rem;
+    }
+
+    .part2 {
+        max-width: 100%;
+    }
+
+
+    ul, li {
+        width: 50rem;
+        font-size: 2.4rem;
+        max-width: 100%;
+    }
+    
+}
+

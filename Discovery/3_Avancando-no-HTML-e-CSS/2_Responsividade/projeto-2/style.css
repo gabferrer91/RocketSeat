@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Source Serif 4", serif;
+    font-size: 60%;
+    color: #A54328;
+}
+
+body {
+    display: flex;
+}
+
+.centralArea {
+    width: 34rem;
+    padding: auto;
+    margin: auto;
+}
+
+main {
+    width: 32rem;
+    margin: 2rem auto;
+    background: #F9F4FB;
+    border-radius: 1.2rem;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    padding: 0.8rem;
+}
+
+h1 {
+    font-size: 2.7rem;
+    margin: 3.4rem 2.9rem 3.6rem 0;
+}
+
+img {
+    width: 30rem;
+    margin: 0 8px 4.7rem 0;
+}
+
+.page1 p, li {
+    font-size: 1.22rem;
+}
+
+.page2 p {
+    font-weight: bold;
+    font-size: 1.41rem;
+}
+
+ul, ol {
+    list-style-position: outside;   /* Para que os marcadores permaneçam fora do texto */
+    padding-left: 1.6rem;
+}
+
+li {
+    padding-left: 10px;            /* Adiciona espaçamento à esquerda do texto */
+    position: relative;            /* Ajusta a posição para adicionar um marcador customizado se necessário */
+}
+
+li::marker {
+    font-size: 1.2em;               /* Tamanho do marcador */
+    
+}
+
+.page2 p:nth-of-type(2) {
+    margin-top: 2.5rem;
+}
+
+button {
+    margin-top: 5rem;
+    border: none;
+    border-radius: 6px;
+    background: #A54328;
+    font-size: 1rem;
+    color: white;
+    width: 9.5rem;
+    height: 3.2rem;
+    margin: 5rem auto 1rem 1rem;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #70230d;   
+    box-shadow: none;
+}
+
+@media (min-width:1020px) {
+
+    html{
+        display: flex;
+    }
+
+    body {
+        margin: auto;
+        width: 115rem;
+    }
+
+    .centralArea{
+        width: 100%;
+        margin: 2rem auto;
+        background: #F9F4FB;
+        border-radius: 1.2rem;
+        box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        padding: 0.8rem;
+        
+    }
+
+    main {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        gap: 11rem;
+        background: none;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page1, .page2 {
+        width: 100%;
+        width: 45rem;
+        text-align: justify;
+    }
+
+    .page1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        text-align: center;
+        margin: 0 auto 5rem;
+    }
+}
+

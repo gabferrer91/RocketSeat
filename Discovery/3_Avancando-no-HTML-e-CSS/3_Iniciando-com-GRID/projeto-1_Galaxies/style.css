@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+    color: #C4C4CC;
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(37,17,29,1) 0%, rgba(46,14,33,1) 100%);
+    display: grid;
+    justify-content: center;
+    padding: 4rem;
+}
+
+main {
+    background: radial-gradient(circle, rgba(0,0,0,1) 58%, rgba(91,91,91,1) 100%);
+    padding: 2rem;
+    border: solid 1px rgb(61, 61, 61);
+    border-radius: 1.2rem;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cabecalho {
+    margin-bottom: 6.2rem;
+}
+
+.content {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 4.4rem;
+    column-gap: 6rem;
+}
+
+.interior {
+    width: 36.6rem;
+    height: 44.8rem;
+    border: solid #323238 2px;
+    border-radius: 8px;
+    background: rgb(31, 31, 31);
+}
+
+h1 {
+    color: #02799D;
+    font-size: 5.8rem;
+    font-weight: bold;
+}
+
+.cabecalho p {
+    font-size: 3.2rem;
+}
+
+.interior h3 {
+    font-size: 3.5rem;
+    margin: 1rem;
+}
+
+.interior p {
+    font-size: 1.938rem;
+    text-align: justify;
+    margin: 1rem;
+}
+
+img {
+    width: 36.2rem;
+    height: 17.7rem;
+    border-radius: 6px 6px 0 0;
+    margin: auto;
+}
+
+.hline {
+    margin: auto;
+    height: 0;
+    width: 90%;   
+    border: solid 1px rgb(100, 100, 100);
+    margin-bottom: 2rem;
+}

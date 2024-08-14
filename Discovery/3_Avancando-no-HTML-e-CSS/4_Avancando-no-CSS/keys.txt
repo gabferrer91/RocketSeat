@@ -1,0 +1,23 @@
+https://unsplash.com/
+Application ID: 643341
+Access Key: U00-D80L0np3qyc8J6rFiBZg9q5Eynyb0LLnEkHiQOc
+Secret key: j7SbkvdLeevlDfMw2nkHOYBzeoLadHpAx6hofluxwoM
+
+https://api.unsplash.com/photos/?client_id=U00-D80L0np3qyc8J6rFiBZg9q5Eynyb0LLnEkHiQOc
+https://api.unsplash.com/photos/random?client_id=U00-D80L0np3qyc8J6rFiBZg9q5Eynyb0LLnEkHiQOc      **
+https://api.unsplash.com/
+
+
+<img src="" id="random-image">
+
+<script>
+    fetch('https://api.unsplash.com/photos/random?client_id=U00-D80L0np3qyc8J6rFiBZg9q5Eynyb0LLnEkHiQOc')
+        .then(response => response.json())
+        // pegando o conteudo JSON da response e nomeando de 'data'
+        .then(data => {
+            // no JSON da url, acessando a img: {"urls":["regular":"link",...]}
+            console.log(data.urls.regular);
+            document.getElementById('random-image').src = data.urls.regular;
+          })
+        .catch(error => console.error('Erro:', error));
+</script>

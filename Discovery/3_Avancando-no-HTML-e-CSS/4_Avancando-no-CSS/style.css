@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    
+    /*variaveis em CSS*/
+    --color-base-white: #ffffff;
+    --color-base-gray-100: #f5f5f5;
+    --color-base-gray-300: #8d8d99;
+    --color-base-grey-500: #3D3D3D;
+    --color-base-gray-900: #202024;
+}
+
+html, body, input {
+    font-family: "Mulish", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--color-base-white);
+}
+
+#app {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+/* #app > * {
+    border: solid  red 1px;
+} */
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper, form {
+    display: flex;
+    flex: 1;
+}
+
+.input-wrapper input {
+    padding: 1.6rem;
+    background: var(--color-base-gray-100);
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    opacity: 0.56;
+}
+
+.input-wrapper input::placeholder {
+    color: var(--color-base-grey-500);
+}
+
+main {
+    overflow-y: scroll;         /* somente o conteudo do main terá rolagem */
+    background-color: var(--color-base-gray-100);
+}
+
+.container {
+    padding: 1.6rem 3.2rem;
+    width: min(1120rem, 100%);
+    margin: 0 auto;
+}
+
+nav,ul {
+    display: flex;
+    align-items: center;
+    gap: 7.5rem;
+    font-weight: 700;  
+}
+
+li {
+    list-style-type:none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-base-gray-300);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline 1px var(--color-base-gray-900);
+    color: var(--color-base-gray-900);
+}
+
+nav img {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#searchId {
+    flex: 1;
+}
+
+footer p {
+    text-align: center;
+    padding: 1.6rem;
+    font-weight: 600;
+}
+
+/* galeria */
+
+main h1 {
+    font-size: 2.4rem;
+    padding-top: 1.6rem;
+}
+
+.gallery {
+    margin-top: 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2.2rem 2rem;
+}
+
+.item {
+    background: var(--color-base-white);
+    border-radius: 0.8rem;
+    overflow: hidden;       /*o que sobrar pra fora do conteiner não aparecerá*/
+    padding-bottom: 1rem;
+}
+
+.divFig {
+    height: 75%;
+    overflow: hidden;       /*reduzir a sobreposicao inferior das fotos*/
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 16/9;           /* proporcao da img */
+    object-fit: cover;            /* cobre a área sem distorcer */
+
+    transition: transform 100ms, filter 50ms;
+    /* transition-property: transform, filter; */
+    /* transition-duration: 1s; */
+}
+
+/*tchan do projeto*/
+.item img:hover {
+    filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+    transform: scale(1.1) rotate(-2deg);
+}
+
+.details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.tags{
+    padding: 1rem 1.5rem;
+}
+
+
+
+.tags span {
+    border: solid 1px;
+    padding: 0.2rem 0.4rem;
+    background: var(--color-base-gray-100);
+    border-radius: 0.4rem;
+    height: fit-content;
+    text-transform: uppercase;
+}
+
+
+/*animacoes*/
+
+header {
+    --startFrom: -100%;
+    animation: movimento 1s;
+}
+
+footer {
+    --startFrom: 100%;
+    animation: movimento 1s;
+}
+
+.item{
+    --delay: 0.2s;
+    animation: aparecer 0.4s var(--delay) backwards;
+}
+
+@keyframes movimento {
+    from {
+        transform: translateY(var(--startFrom));        /* ele entende que a var startFrom é diferente para header e footer */
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}

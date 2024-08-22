@@ -41,7 +41,6 @@ p {
 }
 
 .biscuit {
-    background-image: url('assets/fortune-cookie.png');
     background-size: cover;
     width: 300px;
     height: 200px;
@@ -76,7 +75,6 @@ p {
 }
 
 .openedCookie{
-    background-image: url('assets/opened-cookie.png');
     background-size: cover;
     width: 300px;
     height: 200px;
@@ -105,4 +103,37 @@ p {
 #again:hover {
     background-color: #b36801;
     margin: auto auto;
+}
+
+
+/* animacao vibrando */
+.biscuit:hover img {
+    animation: shake 0.5s infinite;      /* name duration iteration-count */
+}
+
+@keyframes shake {
+    0% { transform: translate(0); }
+    10% { transform: translate(-5px, -5px); }
+    20% { transform: translate(5px, -5px); }
+    30% { transform: translate(5px, 5px); }
+    40% { transform: translate(-5px, 5px); }
+    50% { transform: translate(0); }
+    60% { transform: translate(5px, 5px); }
+    70% { transform: translate(5px, -5px); }
+    80% { transform: translate(-5px, 5px); }
+    90% { transform: translate(-5px, -5px); }
+    100% { transform: translate(0); }
+}
+
+
+/* animacao biscoito abrindo */
+.message {
+    animation: surging 2.5s forwards;
+}
+
+@keyframes surging {
+    0% {opacity: 0; transform: scale(0.33) translateY(30rem);}
+    25% {opacity: 25; transform: scale(0.66) translateY(20rem);}
+    75% {opacity: 75; transform: scale(1.1) translateY(-5rem);}
+    100% {opacity: 100; transform: scale(1.0) translateY(0rem);}
 }

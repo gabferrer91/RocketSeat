@@ -4,36 +4,52 @@
     box-sizing: border-box;
 }
 
+
 :root {
-    font-size: clamp(40%, 1% + 2vw, 62.5%);               /*responsividade*/
-    --WrapperColor: #242424;
     --hue: 194;
-    --bg-color:hsl(var(--hue), 5%, 7%);
-    --text-color:hsl(var(--hue), 40%, 98%);
-    --primary-color:hsl(var(--hue), 100%, 63%);
-    --controls-bg-color:hsl(var(--hue), 0%, 14%);
+    --bg-color: hsl(var(--hue), 5%, 7%);
+    --text-color: hsl(var(--hue), 40%, 98%);
+    --primary-color: hsl(var(--hue), 100%, 63%);
+    --controls-bg-color: hsl(var(--hue), 0%, 14%);
+    --button-secondary: hsl(var(--hue), 40%, 98%);
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
 }
+
 
 html.light {
-    --text-color:hsl(var(--hue), 5%, 7%);
-    --bg-color:hsl(var(--hue), 40%, 98%);
-    --primary-color:hsl(var(--hue), 100%, 63%);
-    --controls-bg-color:hsl(var(--hue), 0%, 14%);
+    --text-color: hsl(var(--hue), 5%, 7%);
+    --bg-color: hsl(var(--hue), 40%, 98%);
+    --controls-bg-color: hsl(var(--hue), 0%, 14%);
 }
 
-body {
-    background-color: var(--bg-color);
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
     color: var(--text-color);
-    display: grid;
-    height: 100vh;
-    place-content: center;
-    transition: background-color 0.7s;
+    transition: background-color 0.3s;          /*transicao suave de fundo do botao (click JS) no background*/
+}
+
+
+body {
+background-color: var(--bg-color);
+color: var(--text-color);
+display: grid;
+height: 100vh;
+place-content: center;
+transition: all 0.3s;                           /*transicao suave de fundo 'de volta'*/
 }
 
 #app {
     display: grid;
-    justify-content: center;
-    text-align: center;
+    justify-items: center;
 }
 
 .flex {
@@ -43,67 +59,49 @@ body {
 #timer {
     font-size: 9.6rem;
     font-weight: bold;
-    font-family: roboto;
+    font-family: sans-serif;
 }
 
 #controls {
-    display: flex;
-    justify-content: space-around;
-    margin-top:1.6rem;
+    margin-top: 1.6rem;
     padding: 2.2rem 4rem;
     gap: 1.6rem;
     background-color: var(--controls-bg-color);
     border-radius: 999rem;
+
 }
 
 button {
     background-color: transparent;
-    border: none;
+    border: 0;
     color: var(--primary-color);
     cursor: pointer;
     font-size: 6.4rem;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
-button:hover {
+button:hover{
     transform: scale(1.1);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 button:active {
     transform: scale(0.9);
-    filter: brightness(0.5) grayscale(0.8);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .secondary {
-    color: #F8FBFC;
+    color: var(--button-secondary);
 }
 
-html.light .ph-sun,
-html:not(.light) .ph-moon
-{
-    display: none;
-}
 
-#toggle-mode {
-    position: absolute;
-    top: 3rem;
-    right: 3rem;
-    color: var(--text-color);
-}
-
+/* controls */
 .running .ph-play-circle,
 .running .ph-timer,
 .music-on .ph-speaker-none,
 html:not(.running) .ph-pause-circle,
-html:not(.running) .ph-stop-circle
-/* ,html:not(.running) .ph-speaker-high  */
-{
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high {
     display: none;
 }
 
-.sound .ph-speaker-high,
-html:not(.sound) .ph-speaker-none {
-    display: none;
-}

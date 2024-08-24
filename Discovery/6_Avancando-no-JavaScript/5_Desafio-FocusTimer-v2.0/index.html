@@ -1,0 +1,46 @@
+<!-- https://www.figma.com/design/HlYY9RxcTAWUMffyoQryyG/Stage-05---Focus-Timer-2.0-(Copy)?node-id=0-1&t=PmrVbd2Tm7s82ugu-0 -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusTimer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" defer src="src/main.js"></script>
+</head>
+<body>
+    <div class="theme">
+        <img class="sun toggleHidden" src="assets/sun.svg">
+        <img class="moon" src="assets/moon.svg">
+    </div>
+
+    <div id="app">
+        <div class="timerDisplay">
+            <div class="clock">
+                <span id="minutes">25</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </div>
+            <div class="btnControls">
+                <img src="assets/play.svg">
+                <img src="assets/stop.svg">
+                <img src="assets/increase.svg">
+                <img src="assets/decrease.svg">
+            </div>
+        </div>
+
+        <div class="soundsDisplay">
+            <img id="tree" src="assets/tree.svg">
+            <img id="rain" src="assets/rain.svg">
+            <img id="book" src="assets/bookstore.svg">
+            <img id="fire" src="assets/fire.svg">
+        </div>
+    </div>
+
+</body>
+</html>

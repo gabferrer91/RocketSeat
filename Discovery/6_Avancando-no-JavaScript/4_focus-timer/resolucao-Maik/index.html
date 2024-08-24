@@ -12,9 +12,9 @@
     <script type="module" src="./src/main.js" defer></script>
 </head>
 <body>
-<!-- <audio controls src="./assets/kichen-timer.mp3"></audio> -->
     <div id="app">
         <button id="toggle-mode">
+            <span class="sr-only">Ativar light mode</span>
             <i class="ph-bold ph-sun"></i>
             <i class="ph-bold ph-moon"></i>
         </button>
@@ -28,26 +28,32 @@
             <button 
             data-action="toggleRunning"
             class="ph ph-play-circle">
+                <span class="sr-only">Iniciar contador</span>
             </button>
             <button
             data-action="toggleRunning"
              class="ph ph-pause-circle">
+                <span class="sr-only">Pausar contador</span>
             </button>
             <button
             data-action="set"
              class="ph ph-timer secondary">
+                <span class="sr-only">Ajustar contador</span>
             </button>
             <button
             data-action="reset"
              class="ph ph-stop-circle secondary">
+                <span class="sr-only">Reiniciar contador</span>
             </button>
             <button
             data-action="toggleMusic"
              class="ph ph-speaker-none secondary">
+                <span class="sr-only">Iniciar música</span>
             </button>
             <button
             data-action="toggleMusic"
              class="ph ph-speaker-high">
+                <span class="sr-only">Parar música</span>
             </button>
         </section>
 

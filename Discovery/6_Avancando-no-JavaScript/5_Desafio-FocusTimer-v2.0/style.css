@@ -32,6 +32,7 @@ body {
 .btnControls {
     display: flex;
     justify-content: space-around;
+    margin-top: 3rem;
 }
 
 .soundsDisplay {
@@ -112,4 +113,14 @@ body {
 .toggleHidden {
     opacity: 0;
     z-index: -1;
+}
+
+.brightnessAdjust {
+    filter: brightness(3.0);
+    transition: 0.3s;
+}
+
+#arro:active {
+    transform: rotate(30deg);
+    transition: 0.3s;
 }

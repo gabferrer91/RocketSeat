@@ -98,5 +98,5 @@ const seImpar = (variavel) => {
         console.log(`${variavel} é ímpar.`)
     } else { console.log(`${variavel} não é ímpar.`) }
 }
-seImpar(1); seImpar(2); seImpar(3); seImpar(4); 
+seImpar(1); seImpar(2); seImpar(3); seImpar(4);
 

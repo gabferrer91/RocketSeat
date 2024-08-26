@@ -1,0 +1,16 @@
+{
+  "name": "desafio-spa",
+  "version": "1.0.0",
+  "description": "E aí, curtiu aprender todos esses novos conceitos de JavaScript?",
+  "main": "index.js",
+  "scripts": {
+    "start":"lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

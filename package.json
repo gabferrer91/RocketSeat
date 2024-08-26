@@ -5,6 +5,7 @@
   "description": "NODE project",
   "main": "NODE.js",
   "scripts": {
+    "start":"lite-server",
     "olhar_server_1": "node --watch NODE.js\\servidor_1.js",
     "olhar_server_2": "node --watch NODE.js\\servidor_2.js",
     "server_testes": "node --watch NODE.js\\testes.js"
@@ -14,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "lite-server": "^2.6.1",
     "mysql2": "^3.11.0"
   }
 }

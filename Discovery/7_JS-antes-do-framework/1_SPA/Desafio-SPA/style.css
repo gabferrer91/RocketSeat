@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: calc(100vh - 4rem);
+    background-image: url('assets/mountains-universe-1.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    margin-left: 7.2rem;
+    font-size: 2.2rem;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 2rem;
+}
+
+header a:hover {
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    justify-items: center;
+}
+
+#app {
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.universeTab, 
+.explorationTab {
+    display: grid;
+    margin-left: 8rem;
+    margin-top: 4rem;
+    width: 50%;
+    text-align: justify;
+}
+
+.universeTab h1, 
+.explorationTab h1 {
+    margin-bottom: 3rem;
+}
+
+
+.knowMoreTab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 17rem;
+}
+
+.knowMoreTab button {
+    background-color: transparent;
+    width: 19.5rem;
+    height: 4.8rem;
+    border: solid 1px #ffffff;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.knowMoreTab button:hover {
+    transform: scale(1.1);
+}
+
+.knowMoreTab button:active {
+    transform: scale(0.9);
+}

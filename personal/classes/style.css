@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    gap: 4rem;
+    margin: 4rem;
+    justify-content: center
+}
+
+.parte1 {
+    width: 40%;
+}
+
+.parte1 p {
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    background-color: rgb(228, 228, 255);
+}
+
+textarea {
+    min-width: 40rem;
+    max-width: 40rem;
+    min-height: 20rem;
+    max-height: 20rem;
+    background-color: rgb(238, 238, 238);
+}
+
+form {
+    padding: 1rem;
+}

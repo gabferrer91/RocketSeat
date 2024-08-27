@@ -1,17 +1,15 @@
 O lite-server é um pacote do npm para rodar projetos web igual ao live-server.
 Mas ele dá menos problemas com rotas. 
+Instalá-lo na pasta raíz do projeto (pasta 'RS', exemplo):
+    npm install lite-server
 
-Como aqui há diversos projetos de várias aulas, devemos:
+Como aqui há várias aulas, devemos:
 
-    1. instalar o nodejs
-        https://node.js.org
-    2. navegar até a pasta do projeto no terminal
+    1. navegar até a pasta do projeto/aula no terminal
         cd 'Discovery\7_JS-antes-do-framework\1_SPAs'
-    3. iniciar o npm dentro desta pasta:
+    2. iniciar o npm dentro desta pasta:
         npm init -y
-    4. instalar o pacote lite-server pelo terminal:
-        npm install lite-server
-    5. ir no package.json criado e inserir dentro do atributo script:
+    3. ir no package.json criado e inserir dentro do atributo script:
         "start":"lite-server"
-    6. para iniciar um projeto, a pasta dele deve estar apontada no terminal e dar:
+    4. para iniciar um projeto, a pasta dele deve estar apontada no terminal e dar:
         npm start

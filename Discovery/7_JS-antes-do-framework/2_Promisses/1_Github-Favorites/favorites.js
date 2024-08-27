@@ -24,11 +24,11 @@ export class favorites {
     }
 
     delete(user) {
-        const filteredEntries = this.entries.filter(entry => entry.login !== user.login)    /* aqui n precisa de return */
+        //const filteredEntries = this.entries.filter(entry => entry.login !== user.login)     // aqui n precisa de return 
 
-        // const filteredEntries = this.entries.filter(entry=>{
-            // return user.login !== entry.login
-        // })
+        const filteredEntries = this.entries.filter(entry=>{
+            return user.login !== entry.login
+        })
 
         console.log(filteredEntries)
         this.entries = filteredEntries
@@ -43,7 +43,6 @@ export class favoritesView extends favorites {
     constructor(root) {
         super(root)
         this.tbody = this.root.querySelector('table tbody')
-        this.trs = this.root.querySelectorAll('tbody tr')
         this.update()
     }
 
@@ -95,7 +94,7 @@ export class favoritesView extends favorites {
 
 
     removelAllTr() {
-        this.trs.forEach((tr) => {
+        this.tbody.querySelectorAll('tr').forEach((tr) => {
             tr.remove()
           })
     }

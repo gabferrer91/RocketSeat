@@ -1,0 +1,8 @@
+1-> A sigla SPA significa "Single Page Application". 
+2-> Neste tipo de aplicação, apenas o conteúdo principal é atualizado, mantendo toda a estrutura da página estática.
+3-> O método event.preventDefault() impede que o evento padrão ocorra.
+4-> Desestruturação em JS é uma técnica que possibilita extrair dados de um array/objeto e os atribuir em variáveis distintas. Ex.: const {valor1, valor2, valor3} = obj       (criando as consts valor1, valor2, valor3 que existem dentro de obj com os msms nomes)
+5-> Assincronísmo é quando uma operação mais demorada vai sendo executada em segundo plano, sem bloquear a execução das outras. 
+6-> Promise define uma ação que vai ser executada no futuro, já que representa a conclusão de uma função assíncrona. Ex de promisse: .then, .catch
+7-> O método fetch() nos permite fazer solicitações HTTP usando as Promises do JavaScript.
+8 -> Um dos primeiros princípios por trás da Orientação a objetos é o uso de classes:

@@ -118,6 +118,6 @@ Da mesma forma, essa propriedade indica que o fundo do elemento deve estar alinh
 da janela do navegador.
 Com bottom: 0;, você está informando que o elemento deve "tocar" a borda inferior da viewport.
 
-Controlar a sistância das bordas, após aplicar right e bottom, pode ser feito com margin-left e margin-bottom.
+Controlar a distância das bordas, após aplicar right e bottom, pode ser feito com margin-left e margin-bottom.
 */
 

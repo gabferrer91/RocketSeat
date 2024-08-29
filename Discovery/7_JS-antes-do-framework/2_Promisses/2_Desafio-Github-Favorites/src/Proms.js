@@ -1,22 +1,66 @@
-export class higherClass {
+export class dataStore {
     constructor() {
         this.fullBody = document.querySelector('#app')
     }
+
+    setLocals() {
+        const rowsEntries = this.fullBody.querySelectorAll('tbody tr')
+        
+        let list = []
+
+        rowsEntries.forEach(rowEntry => {
+
+            const entryUsername = rowEntry.querySelector('.NameAndAdr span').textContent
+               const entryLogin = rowEntry.querySelector('.NameAndAdr a').textContent
+               const entryrepos = rowEntry.querySelector('.secondDim').textContent
+             const entryFollows = rowEntry.querySelector('.thirdDim').textContent
+
+            const entryObj = {
+                name:entryUsername,
+                login:entryLogin,
+                repos:entryrepos,
+                followers:entryFollows
+            }
+
+            list.unshift(entryObj)
+        });
+
+        localStorage.setItem('usersLocalBK', JSON.stringify(list))
+    }
+
+
+    loadLocals(userToRemove) {
+        const bkDatas = JSON.parse(localStorage.getItem('usersLocalBK'))
+        bkDatas.forEach(bkData => {
+            if (bkData.login !== userToRemove) {
+                this.parseElement(
+                    bkData.name, 
+                    bkData.repos, 
+                    bkData.followers, 
+                    bkData.login.replace('/','')
+                )
+            }
+        })
+    }
+
 }
 
-export class LowerClass extends higherClass {
+
+export class dataHandler extends dataStore {
     constructor() {
         super()
         this.inputValue()
         this.clearRows()
+        this.loadLocals()
+        // this.initLoad()
     }
 
 
     inputValue() {
         const buttonTag = this.fullBody.querySelector('header button')
         buttonTag.addEventListener('click', () => {
-            const inputTag = this.fullBody.querySelector('header input')
-            this.getUserData(inputTag.value)
+            const inputTagValue = this.fullBody.querySelector('header input').value
+            this.getUserData(inputTagValue)
         })
     }
 
@@ -24,11 +68,29 @@ export class LowerClass extends higherClass {
     getUserData(username) {
         const url = `https://api.github.com/users/${username}`
         const resPromise = fetch(url)
-                            .then(req => req.json())
+                            .then(req => {
+                                if(username==="") {
+                                    throw new Error("Usuário não informado.");
+                                }
+                                return req.json()
+                            })
                             .then(jsonObj => {
                                 const { name, public_repos, followers, login } = jsonObj
-                                console.log(name, public_repos, followers, login)
-                                this.parseElement(name, public_repos, followers, login)
+                                const rowsLogin = this.fullBody.querySelectorAll('tbody tr a')
+                                
+                                rowsLogin.forEach(rowLogin => {
+                                    const rowLoginText = rowLogin.textContent
+                                    if(rowLoginText === '/' + login) {
+                                        throw new Error("Usuário já adicionado.");
+                                    }
+                                })
+                                
+                                return this.parseElement(name, public_repos, followers, login)
+                            })
+
+                            .catch(err => {
+                                alert(err)
+                                console.log(err)
                             })
         return resPromise
     }
@@ -41,20 +103,11 @@ export class LowerClass extends higherClass {
             const removingUser = entry.querySelector('.NameAndAdr a').textContent
 
             this.clearRows()
+            this.loadLocals(removingUser)
 
-            const bkDatas = JSON.parse(localStorage.getItem('usersLocalBK'))
-            bkDatas.forEach(bkData => {
-                if (bkData.login !== removingUser) {
-                    this.parseElement(
-                        bkData.name, 
-                        bkData.repos, 
-                        bkData.followers, 
-                        bkData.login.replace('/','')
-                    )
-                }
-            })
         })
     }
+    
 
     clearRows() {
         const rows = this.fullBody.querySelectorAll('tbody tr')
@@ -85,66 +138,10 @@ export class LowerClass extends higherClass {
                     </td>`
 
         newRow.innerHTML = element
-        console.log(newRow)
         this.deleteEntryFeature(newRow)
         tableBody.prepend(newRow)
         this.setLocals()
     }
-    
-    
-    setLocals() {
-        const rowsEntries = this.fullBody.querySelectorAll('tbody tr')
-        
-        let list = []
-
-        rowsEntries.forEach(rowEntry => {
-
-            const entryUsername = rowEntry.querySelector('.NameAndAdr span').textContent
-            const entryLogin = rowEntry.querySelector('.NameAndAdr a').textContent
-            const entryrepos = rowEntry.querySelector('.secondDim').textContent
-            const entryFollows = rowEntry.querySelector('.thirdDim').textContent
-
-            const entryObj = {
-                name:entryUsername,
-                login:entryLogin,
-                repos:entryrepos,
-                followers:entryFollows
-            }
-
-            list.push(entryObj)
-        });
-
-        localStorage.setItem('usersLocalBK', JSON.stringify(list))
-    }
-
-
-
-
-
-    // getUserData() {
-    //     const endpoint = `https://api.github.com/users/vihmalmsteen`
-
-    //     fetch(endpoint)
-    //     .then(res => {
-    //         if(res.status!==200) {
-    //             throw new Error(`Fetch falhou ->> ${res.status}`);
-    //         }
-    //         console.log(res)
-    //         return res.json()
-    //     })
-    //     .then(res => {
-    //         console.log(res)
-    //     })
-    //     .catch(error=>{
-    //         console.log(error)
-    //     })
-        
-
-    //     // console.log(req)
-    // }
-
-
-
     
 }
 

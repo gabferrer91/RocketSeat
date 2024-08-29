@@ -110,7 +110,7 @@ table thead {
     display: flex;
     height: 6.4rem;
     background-color: var(--thead-bg-color);
-    border-bottom: 1px solid var(--table-border-color);
+    /* border-bottom: 1px solid var(--table-border-color); */
 }
 
 table thead th:first-child {

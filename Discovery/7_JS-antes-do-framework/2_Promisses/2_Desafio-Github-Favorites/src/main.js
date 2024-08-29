@@ -1,9 +1,63 @@
 import { higherClass, LowerClass } from './Proms.js'
-
-
 const varClasse = new LowerClass();
-const x = varClasse.inputValue()
-// console.dir(x)
+
+
+
+// export class getUserData {
+//     static fetchData() {
+//         fetch(`https://api.github.com/users/vihmalmsteen`)
+//             .then(res => res.json())
+//             .then(json => {
+//                 const {login, name, public_repos, followers} = json
+//                return {login, name, public_repos, followers}
+//             })
+//       }
+// }
+
+
+
+// let x = getUserData.fetchData()
+// console.log('depois')
+
+/*
+export async function fetchData() {
+    const url = `https://api.github.com/users/vihmalmsteen`;
+    const res = await fetch(url);
+    const json = await res.json();
+    return json;
+}
+
+async function main() {
+    const userData = await fetchData();
+    
+    const userInfo = {
+        name: userData.name,
+        bio: userData.bio,
+        followers: userData.followers
+    };
+
+    console.log(userInfo);
+    return userInfo
+}
+
+main()
+*/
+
+
+
+
+
+
+
+
+
+
+// console.log('fora fn\n',res);
+
+
+
+
+
 
 
 

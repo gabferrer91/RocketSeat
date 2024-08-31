@@ -1,0 +1,3 @@
+https://www.omdbapi.com/
+AIP ex.: https://www.omdbapi.com/?s=pwe&&apikey=7d5e8645
+myKey = 7d5e8645

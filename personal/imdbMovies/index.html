@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMdB Movies</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer>
+        window.env = {
+            API_URL: 'https://www.omdbapi.com/',
+            IMDBKEY: '7d5e8645'
+        }
+    </script>
+    <script type="module" defer src="./src/main.js"></script>
+</head>
+<body>
+    
+    <div class="header">
+        <form>
+            <fieldset>
+                <legend>Dados de busca</legend>
+                <input class="i1" type="text" placeholder="nome">
+                <input class="i2" type="text" placeholder="ano">
+                <input class="i3" type="text" placeholder="tipo">
+                <button>Buscar</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <main class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Filme</th>
+                        <th>Ano</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>asd</td>
+                        <td>ada</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>asd</td>
+                        <td>ada</td>
+                        <td>asd</td>
+                    </tr>
+                    <tr>
+                        <td>asd</td>
+                        <td>ada</td>
+                        <td>asd</td>
+                    </tr>
+                </tbody>
+            </table>
+    </main>
+
+</body>
+</html>

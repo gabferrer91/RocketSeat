@@ -7,7 +7,22 @@ const app = express()
 
 // setando requisições GET na API app
 app.get('/', (req, res) => {
-    res.send('Esta é a raíz, a página principal!')
+    res.send(`Esta é a raíz, a página principal!<br>
+              Das rotas disponíveis:<br>
+              GET -> /mensagem/<br>
+              GET -> /usuarios/:id/:user/<br>
+              GET -> /filmes/<br><br>
+              em filmes, 2 req.query (title, year), logo<br>
+              localhost:3000/filmes?title=nome-do-filme&year=ano<br><br>
+              POST -> /novos-usuarios/<br>
+              3 infos json do body da req: name, email, password<br>
+              Logo, via Insomnia:<br>
+              {<br>
+                "name":"John Doe",<br>
+                 "email":"john.doe@gmail.com",<br>
+                 "password":"john123"<br>
+              }
+              `)
 })
 
 app.get('/mensagem/', (req, res) => {
@@ -66,7 +81,14 @@ app.get('/filmes/', (req, res) => {
 })
 
 
-// apontando uma porta para o express ficar atento
+// fazer requisicao via Insomnia
+app.post('/novos-usuarios/', (req, res) => {
+    const {name, email, password} = req.body
+    res.json({name, email, password})
+})
+
+
+// Iniciando server, apontando uma porta para o express ficar atento
 const port = 3000
 app.listen(port, () => {
     console.log(`Server listening to port ${port}`)

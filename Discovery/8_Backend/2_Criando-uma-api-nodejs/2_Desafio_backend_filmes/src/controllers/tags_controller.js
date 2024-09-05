@@ -60,16 +60,44 @@ class tags_controller {
 
 
     async update(req, res){
+        const {user_id, tag_id} = req.params
+        const {name} = req.body
 
+        const database = await sqliteConn()
+        
+        const foundUserTag = await database.get('select * from movie_tags where id = ? and user_id = ?', 
+            [tag_id, user_id])
+
+        if(!foundUserTag) {
+            throw new errorHandler("Tag não encontrada.")
+        }
+
+        if(!name || foundUserTag.name === name) {
+            throw new errorHandler("Informe o novo nome da tag.")
+        }
+
+        await database.run(`update movie_tags set name = ? where id = ?`, [name, tag_id])
+        const updatedRegister = await database.all('select * from movie_tags where id = ?', [tag_id])
+        res.json(updatedRegister)
     }
 
 
 
     async delete(req, res){
+        const {user_id, tag_id} = req.params
+        const database = await sqliteConn()
+        const tagFound = await database.get('select * from movie_tags where user_id = ? and id = ?', [user_id, tag_id])
 
+        if(!tagFound) {
+            throw new errorHandler("Tag não encontrada.")
+        }
+
+        await database.run('delete from movie_tags where id = ?', [tag_id])
+        res.send('Tag removida.')
     }
 }
 
 
 
 module.exports = {tags_controller}
+

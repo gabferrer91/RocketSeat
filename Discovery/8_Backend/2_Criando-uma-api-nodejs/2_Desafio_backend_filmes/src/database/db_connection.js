@@ -7,6 +7,7 @@ async function sqliteConn() {
         filename: path.resolve(__dirname, 'moviesDB.db'),       // se nao tem o arquivo do DB ele cria nesse diretorio com esse nome
         driver:sqlite3.Database
     })
+    await DB.run('PRAGMA foreign_keys = ON;')
     
     return DB   // dentro desse obj que se pode fazer consultas com os métodos exec, all, run...
 }

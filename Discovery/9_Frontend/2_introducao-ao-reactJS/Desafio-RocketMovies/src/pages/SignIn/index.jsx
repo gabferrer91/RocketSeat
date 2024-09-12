@@ -3,8 +3,8 @@ import BgImg from '../../assets/backgroundImg.png'
 import {Input} from '../../Components/input'
 import {Button} from '../../Components/button'
 import {BackBtn} from '../../Components/BackButton'
-// import { FiUser } from "react-icons/fi";
 import { MdMailOutline, MdLockOutline } from "react-icons/md";
+import {Link} from 'react-router-dom'
 
 
 export function SignIn() {
@@ -20,10 +20,13 @@ export function SignIn() {
 
                     <Input icon={MdMailOutline} placeTitle={'E-mail'}/>
                     <Input icon={MdLockOutline} type={'password'} placeTitle={'Senha'}/>
-                    <Button title={'Entrar'}/>
+                    <Link className='hrefLink' to={'/'}>
+                        <Button title={'Entrar'}/>
+                    </Link>
                 </div>
+                <Link className='hrefLink' to={'/SignOut'}>
                     <BackBtn ArrowNeeded={false} text={'Criar conta'}/>
-            
+                </Link>
             </DivContainer>
 
             <ImgBgContainer>

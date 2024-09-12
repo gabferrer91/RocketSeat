@@ -55,4 +55,8 @@ export const Container = styled.header`
     color: ${({theme}) => theme.COLORS.GRAY_100};
     text-decoration: none;
   }
+
+  .hrefLink {
+    text-decoration: none;
+  }
 `

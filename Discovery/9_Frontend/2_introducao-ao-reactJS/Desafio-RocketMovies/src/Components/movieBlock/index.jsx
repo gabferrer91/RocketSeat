@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import {Container} from './styles'
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-
+import {Link} from 'react-router-dom'
 
 export function MyMoviesContainer({title, text, rating, totalStars=5, children, ...rest}) {
     const renderStars = () => {
@@ -18,7 +18,11 @@ export function MyMoviesContainer({title, text, rating, totalStars=5, children, 
 
     return (
         <Container {...rest}>
-            <h3>{title}</h3>
+            <h3>
+                <Link className='hrefLink' to={'/MoviePreview'}>
+                    {title}
+                </Link>
+            </h3>
             <div>{renderStars()}</div>
             <p>{text}</p>
             {children}

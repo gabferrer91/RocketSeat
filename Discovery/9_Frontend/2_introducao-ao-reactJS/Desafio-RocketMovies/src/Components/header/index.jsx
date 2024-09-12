@@ -1,5 +1,5 @@
 import {Container} from './styles'
-
+import {Link} from 'react-router-dom'
 
 export function Header() {
     return (
@@ -8,10 +8,14 @@ export function Header() {
             <input type="text" placeholder='Pesquisar pelo título'/>
             <div>
                 <div>
-                    <span>Vitor Paiva</span>
-                    <a href="/">sair</a>
+                    <Link className='hrefLink' to={'/User'}>
+                        <span>Vitor Paiva</span>
+                    </Link>
+                    <Link to="/SignIn">sair</Link>
                 </div>
-                <img src="https://github.com/vihmalmsteen.png" alt="user img" />
+                <Link to={'/User'}>
+                    <img src="https://github.com/vihmalmsteen.png" alt="user img" />
+                </Link>
             </div>
         </Container>
     )

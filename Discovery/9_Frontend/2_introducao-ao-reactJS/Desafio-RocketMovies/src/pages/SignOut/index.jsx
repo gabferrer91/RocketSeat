@@ -5,7 +5,7 @@ import {Button} from '../../Components/button'
 import {BackBtn} from '../../Components/BackButton'
 import { FiUser } from "react-icons/fi";
 import { MdMailOutline, MdLockOutline } from "react-icons/md";
-
+import {Link} from 'react-router-dom'
 
 export function SignOut() {
     return(
@@ -21,9 +21,13 @@ export function SignOut() {
                     <Input icon={FiUser} placeTitle={'Nome'}/>
                     <Input icon={MdMailOutline} placeTitle={'E-mail'}/>
                     <Input icon={MdLockOutline} type={'password'} placeTitle={'Senha'}/>
-                    <Button title={'Criar conta'}/>
+                    <Link className='hrefLink' to={'/'}>
+                        <Button title={'Criar conta'}/>
+                    </Link>
                 </div>
+                <Link className='hrefLink' to={'/SignIn'}>
                     <BackBtn text={'Voltar para o login.'}/>
+                </Link>
             
             </DivContainer>
 

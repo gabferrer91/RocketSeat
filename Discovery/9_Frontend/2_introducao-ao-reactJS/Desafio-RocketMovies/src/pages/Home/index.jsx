@@ -5,7 +5,7 @@ import {Container} from './styles'
 import {MyMoviesContainer} from '../../Components/movieBlock'
 import {MovieTag} from '../../Components/tag'
 import {SectionTags} from '../../Components/sectionTags'
-
+import {Link} from 'react-router-dom'
 
 export function Home() {
     return (
@@ -14,7 +14,9 @@ export function Home() {
                 <div>
                     <h1>Meus Filmes</h1>
                     <div className='addTitle'>
-                        <Button icon={<FiPlus/>} title={'Adicionar filme'}/>
+                        <Link className='linkHref' to='/CreateMovie'>
+                            <Button icon={<FiPlus/>} title={'Adicionar filme'}/>
+                        </Link>
                     </div>
                 </div>
                 <div className='MoviesContainerClass'>

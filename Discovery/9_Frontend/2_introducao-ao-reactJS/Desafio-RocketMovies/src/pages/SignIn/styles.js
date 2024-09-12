@@ -8,6 +8,10 @@ export const MainContainer = styled.main`
     grid-template-columns: 640px 1fr;
     grid-template-areas: 
     "Form ImgBg";
+
+    .hrefLink {
+        text-decoration: none;
+    }
 `
 
 

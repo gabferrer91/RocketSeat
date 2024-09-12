@@ -16,4 +16,9 @@ export const Container = styled.div`
     p {
         text-align: justify;
     }
+
+    .hrefLink {
+        text-decoration: none;
+        color: white;
+    }
 `

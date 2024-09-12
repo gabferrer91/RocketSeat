@@ -53,5 +53,8 @@ export const Container = styled.div `
         }
     }
 
+    .hrefLink {
+        text-decoration: none;
+    }
 `
 

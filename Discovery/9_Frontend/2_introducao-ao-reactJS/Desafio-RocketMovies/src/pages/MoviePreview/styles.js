@@ -48,5 +48,10 @@ export const Container = styled.div`
     svg {
       color: ${({theme}) => theme.COLORS.PINK};
     }
+
+    .hrefLink {
+      text-decoration: none;
+      color: white;
+    }
 `
 

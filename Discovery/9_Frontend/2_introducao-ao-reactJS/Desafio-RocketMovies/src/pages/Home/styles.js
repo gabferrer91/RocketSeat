@@ -27,4 +27,10 @@ export const Container = styled.div`
     width: 207px;
     margin-right: 18px;
   }
+
+  .linkHref {
+  text-decoration:none;
+}
+
 `
+

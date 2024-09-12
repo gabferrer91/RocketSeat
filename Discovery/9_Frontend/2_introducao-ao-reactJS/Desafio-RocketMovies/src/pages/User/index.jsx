@@ -5,14 +5,16 @@ import {Input} from '../../Components/input'
 import {Button} from '../../Components/button'
 import { FiUser } from "react-icons/fi";
 import { MdMailOutline, MdLockOutline, MdCameraAlt } from "react-icons/md";
-
+import {Link} from 'react-router-dom'
 
 export function User() {
     return (
         <Container>
             <div className='header'>
                 <div className="backbtn">
-                    <BackBtn text={'Voltar'}/>
+                    <Link className='hrefLink' to={'/'}>
+                        <BackBtn text={'Voltar'}/>
+                    </Link>
                 </div>
             </div>
 

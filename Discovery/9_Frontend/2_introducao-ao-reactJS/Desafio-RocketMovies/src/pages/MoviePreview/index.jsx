@@ -5,7 +5,7 @@ import {BackBtn} from '../../Components/BackButton'
 import {AiFillStar, AiOutlineStar, AiOutlineClockCircle} from "react-icons/ai";
 import {SectionTags} from '../../Components/sectionTags'
 import {MovieTag} from '../../Components/tag'
-
+import {Link} from 'react-router-dom'
 
 export function MoviePreview({totalStars=5}) {
 
@@ -27,7 +27,9 @@ export function MoviePreview({totalStars=5}) {
             <main>
               <div className='aboutAll'>
                 
-                  <BackBtn text={'Voltar'}/>
+                <Link className='hrefLink' to={'/'}>
+                    <BackBtn text={'Voltar'}/>
+                </Link>
                   <div className='aboutMovie'>
                       <h1>Interestellar</h1>
                       {renderStars(5)}

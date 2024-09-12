@@ -5,6 +5,7 @@ import {Input} from '../../Components/input'
 import {TextArea} from '../../Components/textArea'
 import {Button} from '../../Components/button'
 import {Marker} from '../../Components/marker'
+import {Link} from 'react-router-dom'
 
 
 export function CreateMovie() {
@@ -14,7 +15,9 @@ export function CreateMovie() {
                 <Header />
             </div>
               <div className='main'>
-                <BackBtn text={'Voltar'}/>
+                <Link className='hrefLink' to={'/'}>
+                    <BackBtn text={'Voltar'}/>
+                </Link>
                 <h1>Novo Filme</h1>
                 <div>
                   <Input type={'text'} placeTitle={'Título'}/>

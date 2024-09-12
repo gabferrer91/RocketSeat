@@ -84,5 +84,9 @@ export const Container = styled.main`
             border: ${({theme}) => theme.COLORS.PINK} solid 6px;
         }
     }
+
+    .hrefLink {
+        text-decoration: none;
+    }
 `
 

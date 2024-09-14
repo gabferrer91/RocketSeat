@@ -36,10 +36,10 @@ class usersController {
 
     async update(req, res) {
         const {name, email, password, old_password} = req.body      // no body definido na requisição no Insomnia
-        const {id} = req.params                                     // nos params obrigatorios do endpoint
+        const user_id = req.user.id                                 // nos params obrigatorios do endpoint
         
         const database = await sqliteConnection()
-        const user = await database.get('select * from users where id = (?)', [id])
+        const user = await database.get('select * from users where id = (?)', [user_id])
         
         // erro se usuario nao foi encontrado na query com o id informado 
         if(!user) {
@@ -79,10 +79,10 @@ class usersController {
             , email = ?
             , updated_at = DATETIME()
             where id = ?`, 
-            [newName, newemail, id]
+            [newName, newemail, user_id]
         )
         
-        const userAfterUpdate = await database.get('select * from users where id = (?)', [id])
+        const userAfterUpdate = await database.get('select * from users where id = (?)', [user_id])
 
         return res.status(200).json(userAfterUpdate)
     }

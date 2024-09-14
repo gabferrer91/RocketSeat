@@ -16,6 +16,10 @@ app.use(express.json())                           // define a interpretação co
 app.use(routes)
 
 
+// carregar avatar no insomnia ->>
+const {uploads_folder} = require('./configs/upload.js')
+app.use('/files', express.static(uploads_folder))
+// <<- carregar avatar no insomnia
 
 app.use((error, req, res, next) => {
     // response do erro do cliente (appError)

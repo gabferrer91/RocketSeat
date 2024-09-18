@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import { Container } from './styles'
-import { Tag } from '../Tag'
+import {Container} from './styles'
+import {Tag} from '../Tag'
 
-export function Notes({ data, ...rest }) {
+export function Notes({data, ...rest}) {
   return (
     <Container {...rest}>
       <h1>{data.title}</h1>
@@ -18,3 +18,4 @@ export function Notes({ data, ...rest }) {
     </Container>
   )
 }
+

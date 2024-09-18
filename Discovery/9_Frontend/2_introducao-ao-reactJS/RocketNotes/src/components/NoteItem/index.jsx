@@ -4,9 +4,14 @@ import {Container} from './styles'
 
 export function NoteItem( {isNew, value, onClick, ...rest} ) {
     return (
-        <Container isNew={isNew}>
+        <Container $isNew={isNew}>
             <input type="text" value={value} readOnly={!isNew} {...rest}/>
-            <button onClick={onClick} className={isNew? 'button-add' : 'button-delete'}>
+            
+            <button 
+            type="button"
+            onClick={onClick} 
+            className={isNew? 'button-add' : 'button-delete'}
+            >
                 {isNew? <FiPlus /> : <FiX />}
             </button>
         </Container>

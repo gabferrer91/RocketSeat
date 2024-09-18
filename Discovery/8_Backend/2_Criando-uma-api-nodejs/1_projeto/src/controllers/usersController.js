@@ -77,9 +77,10 @@ class usersController {
             `update users set 
               name = ?
             , email = ?
+            , password = ?
             , updated_at = DATETIME()
             where id = ?`, 
-            [newName, newemail, user_id]
+            [newName, newemail, user.password, user_id]
         )
         
         const userAfterUpdate = await database.get('select * from users where id = (?)', [user_id])

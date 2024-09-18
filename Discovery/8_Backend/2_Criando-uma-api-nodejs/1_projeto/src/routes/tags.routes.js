@@ -7,9 +7,12 @@ const TagsController = require('../controllers/tagsController')
 
 const tagsRoutes = Router()
 
+const {ensureAuth} = require('../middlewares/ensureAuth')
+tagsRoutes.use(ensureAuth)
+
 const tagsController = new TagsController()
 
-tagsRoutes.get('/:note_id', tagsController.index)
+tagsRoutes.get('/', tagsController.index)
 
 module.exports = tagsRoutes
 

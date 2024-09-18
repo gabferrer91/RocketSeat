@@ -28,16 +28,22 @@ export const Profile = styled(Link)`
     flex-direction: column;
     margin-left: 16px;
     line-height: 24px;
+    color: ${({theme}) => theme.COLORS.GRAY_100};
+    transition: all 0.5s;
+  }
+  
+  > div:hover {
+    text-decoration: underline;
+    filter: brightness(0.8);
+    transition: all 0.5s;
   }
 
   > span {
     font-size: 14px;
-    color: ${({theme}) => theme.COLORS.GRAY_100};
   }
 
   > strong {
     font-size: 18px;
-    color: ${({theme}) => theme.COLORS.WHITE};
   }
 `
 

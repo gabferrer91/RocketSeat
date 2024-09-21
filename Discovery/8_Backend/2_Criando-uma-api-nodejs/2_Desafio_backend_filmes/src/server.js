@@ -3,10 +3,13 @@ const express = require('express')
 const {connAndMigrate} = require('./database/migrations/connection_and_migrate')
 const { sqliteConn } = require('./database/db_connection')
 const {assembled_routes} = require('./routes/assembler')
+const cors = require('cors')  // Para que o backend tenha acesso ao frontend e possa atender às solicitações (já o front se usa fetch ou axios para mandar solicitações ao backend)
+
 
 connAndMigrate()
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 app.use(assembled_routes)
 
@@ -31,3 +34,4 @@ app.get('/filmes', (req, res) => {
 app.listen(port, () => {
     console.log(`Running... port -> ${port}`)
 })
+

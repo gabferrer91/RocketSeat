@@ -17,14 +17,18 @@ import {SignOut} from './pages/SignOut'
 import {User} from './pages/User'
 */
 
-// Rotas
-import { Routes } from '../src/routes'
+// Rotas e contextos (login e auth)
+import {Routes} from '../src/routes'
+import {AuthProvider} from './hooks/auth.jsx'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
-      <Routes/>
+        <AuthProvider>          {/* Contexto criado MyContext engloba as rotas. Então qualquer rota tem acesso ao value desse contexto */}
+          <Routes/>
+        </AuthProvider>
     </ThemeProvider>
   </StrictMode>,
 )

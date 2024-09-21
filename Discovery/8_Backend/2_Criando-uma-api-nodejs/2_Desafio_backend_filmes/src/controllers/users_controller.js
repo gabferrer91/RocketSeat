@@ -44,7 +44,8 @@ class user_controller {
     /* update -> atualizar nome, email e senha do usuario */
     async update(req, res) {
 
-        const {user_id} = req.params
+        const {user_id} = req.usuario
+        console.log(req.usuario)
         const {name, email, password} = req.body
         
         const database = await sqliteConn()

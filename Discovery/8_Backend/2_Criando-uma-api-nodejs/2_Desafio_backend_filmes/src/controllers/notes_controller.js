@@ -5,7 +5,8 @@ const errorHandler = require('../utils/errorHandler')
 class notes_controller {
     
     async create(req, res) {
-        const {title, description, rating, user_id} = req.body
+        const {user_id} = req.usuario
+        const {title, description, rating} = req.body
 
         const database = await sqliteConn()
         
@@ -23,7 +24,8 @@ class notes_controller {
     
     
     async delete(req, res) {
-        const {user_id, note_id} = req.params
+        const {user_id} = req.usuario
+        const {note_id} = req.params
         
         const database = await sqliteConn()
         const noteFound = await database.get(`
@@ -41,7 +43,8 @@ class notes_controller {
 
 
     async read(req, res) {
-        const {user_id, note_id} = req.query
+        const {user_id} = req.usuario
+        const {note_id} = req.query
         const database = await sqliteConn()
 
         if(!user_id && !note_id) {
@@ -65,8 +68,9 @@ class notes_controller {
 
     
     async update(req, res) {
+        const {user_id} = req.usuario
         const {title, description, rating} = req.body
-        const {user_id, note_id} = req.params
+        const {note_id} = req.params
 
         const database = await sqliteConn()
         const noteFound = await database.get(`select * from movie_notes where id = ? and user_id = ?`, 

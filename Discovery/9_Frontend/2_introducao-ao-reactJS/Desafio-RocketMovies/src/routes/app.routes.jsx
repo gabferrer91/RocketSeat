@@ -7,7 +7,6 @@ import {CreateMovie} from '../pages/CreateMovie'
 import {MoviePreview} from '../pages/MoviePreview'
 import {User} from '../pages/User'
 
-
 // auth
 /*
 import {SignIn} from '../pages/SignIn'

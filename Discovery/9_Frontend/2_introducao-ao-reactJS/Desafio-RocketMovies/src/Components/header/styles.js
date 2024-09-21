@@ -59,4 +59,13 @@ export const Container = styled.header`
   .hrefLink {
     text-decoration: none;
   }
+
+  .signOutLink {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: ${({theme}) => theme.COLORS.PINK};
+    }
+  }
 `

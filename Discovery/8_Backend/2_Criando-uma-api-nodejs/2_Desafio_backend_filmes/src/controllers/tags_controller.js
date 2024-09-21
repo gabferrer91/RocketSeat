@@ -5,7 +5,8 @@ const errorHandler = require("../utils/errorHandler");
 
 class tags_controller {
     async create(req, res) {
-        const {user_id, note_id} = req.params
+        const {user_id} = req.usuario
+        const {note_id} = req.params
         const tags = req.body
 
         const database = await sqliteConn()
@@ -27,7 +28,7 @@ class tags_controller {
 
 
     async read(req, res){
-        const {user_id} = req.params
+        const {user_id} = req.usuario
         const {note_id, tag_id} = req.query
         const database = await sqliteConn()
 
@@ -60,7 +61,8 @@ class tags_controller {
 
 
     async update(req, res){
-        const {user_id, tag_id} = req.params
+        const {user_id} = req.usuario
+        const {tag_id} = req.params
         const {name} = req.body
 
         const database = await sqliteConn()
@@ -84,7 +86,8 @@ class tags_controller {
 
 
     async delete(req, res){
-        const {user_id, tag_id} = req.params
+        const {user_id} = req.usuario
+        const {tag_id} = req.params
         const database = await sqliteConn()
         const tagFound = await database.get('select * from movie_tags where user_id = ? and id = ?', [user_id, tag_id])
 

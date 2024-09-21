@@ -33,11 +33,11 @@ export function AuthProvider({children}) {
             // Para isso, uso o metodo "defaults" do axios, que permite definir opcoes default para todas as requisicoes
             // feitas com o axios. No caso, estou definindo que o header "Authorization" deve ter o valor 
             // "Bearer <token>", onde <token> é o token recebido na resposta da API:
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            api.defaults.headers.common['authorization'] = `Bearer ${token}`;
             setData({user, token});
             
-            localStorage.setItem("@rocketnotes:user", JSON.stringify(user));
-            localStorage.setItem("@rocketnotes:token", token);
+            localStorage.setItem("@rocketMovies:user", JSON.stringify(user));
+            localStorage.setItem("@rocketMovies:token", token);
         } catch (error) {
             if (error.response) {
                 const {data} = error.response
@@ -49,21 +49,20 @@ export function AuthProvider({children}) {
                 alert("Houve um erro no login, tente novamente.");
             }
         }
-        
     }
 
     function signOut() {
-        localStorage.removeItem("@rocketnotes:token")
-        localStorage.removeItem("@rocketnotes:user")
+        localStorage.removeItem("@rocketMovies:token")
+        localStorage.removeItem("@rocketMovies:user")
         setData({})
     }
     
 
     useEffect(() => {
-        const token = localStorage.getItem("@rocketnotes:token");
-        const user = localStorage.getItem("@rocketnotes:user");
+        const token = localStorage.getItem("@rocketMovies:token");
+        const user = localStorage.getItem("@rocketMovies:user");
         if (token && user) {
-            api.defaults.headers.authorization = `Bearer ${token}`;
+            api.defaults.headers.common['authorization'] = `Bearer ${token}`;
             setData({ token, user: JSON.parse(user) });
         }
     }, []);

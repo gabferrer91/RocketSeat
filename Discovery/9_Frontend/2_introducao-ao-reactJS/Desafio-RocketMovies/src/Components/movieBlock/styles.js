@@ -3,6 +3,8 @@ import {styled} from 'styled-components'
 
 export const Container = styled.div`
     width: 1137px;
+    min-height: 200px;
+    max-height: 250px;
     border-radius: 16px;
     background-color: ${({theme}) => theme.COLORS.BACKGROUND_600};
     padding: 32px;

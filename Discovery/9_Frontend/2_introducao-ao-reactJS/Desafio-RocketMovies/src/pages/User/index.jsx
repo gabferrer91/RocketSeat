@@ -95,8 +95,6 @@ export function User() {
                     onClick={handleUser}
                     />
                 </div>
-
-
             </div>
         </Container>
     )

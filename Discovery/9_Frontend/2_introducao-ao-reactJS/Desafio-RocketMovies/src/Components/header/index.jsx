@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import {Container} from './styles'
 import {Link} from 'react-router-dom'
 import {useAuth} from '../../hooks/auth'
 
 
-export function Header() {
+export function Header({onSearchChange}) {
     const {signOut} = useAuth()
     
     function handleSignOut() {
@@ -13,7 +14,9 @@ export function Header() {
     return (
         <Container>
             <h1>RocketMovies</h1>
-            <input type="text" placeholder='Pesquisar pelo título'/>
+            <input type="text" placeholder='Pesquisar pelo título'
+            onChange={(e) => onSearchChange(e.target.value)}
+            />
             <div>
                 <div>
                     <Link className='hrefLink' to={'/User'}>

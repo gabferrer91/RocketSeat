@@ -8,6 +8,10 @@ class notes_controller {
         const {user_id} = req.usuario
         const {title, description, rating} = req.body
 
+        if(!title || !description || !rating) {
+            throw new errorHandler("Todos os campos devem ser preenchidos.")
+        }
+
         const database = await sqliteConn()
         
         const userExists = await database.get('select * from users where id = ?', [user_id])
@@ -42,30 +46,33 @@ class notes_controller {
     }
 
 
+
     async read(req, res) {
         const {user_id} = req.usuario
-        const {note_id} = req.query
+        const {title, note_id} = req.query
+
         const database = await sqliteConn()
 
-        if(!user_id && !note_id) {
-            throw new errorHandler("Informar pelo menos user_id ou note_id.");
-        }
-
         if(!user_id) {
-            const noteExists = await database.get(`select * from movie_notes where id = ?`, [note_id])
-            res.json(noteExists)
+            throw new errorHandler("Usuário não informado.");
         }
 
-        if(!note_id) {
-            const noteExists = await database.all(`select * from movie_notes where user_id = ?`, [user_id])
-            res.json(noteExists)
+        let sql = `select * from movie_notes where 1=1 and user_id = ?`
+        const params = [user_id]
+
+        if(title) {
+            sql += ` and title like ?`
+            params.push(`%${title}%`)
         }
 
-        const noteExists = await database.get(`select * from movie_notes where user_id = ? and id = ?`, [user_id, note_id])
+        if(note_id) {
+            sql += ` and id = ?`
+            params.push(note_id)
+        }
+
+        const noteExists = await database.all(sql, params)
         res.json(noteExists)
-
     }
-
     
     async update(req, res) {
         const {user_id} = req.usuario

@@ -3,11 +3,12 @@ import {Container} from './styles'
 import {FiPlus, FiX} from "react-icons/fi";
 
 
-export function Marker({isactive, title}) {
+export function Marker({isactive, title, onChange, onClickAdd, onClickDel, ...rest}) {
     return (
-        <Container $isactive={isactive}>
-            {isactive? <FiPlus /> : <FiX />}
-            {title}
+        <Container $isactive={isactive} {...rest}>
+            {isactive? <FiX onClick={onClickDel}/> : <FiPlus onClick={onClickAdd}/>}
+            {isactive? title : <input type="text" onChange={onChange}/>}
         </Container>
     )
 }
+

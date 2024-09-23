@@ -2,8 +2,10 @@
 import {Container} from './styles'
 import {AiFillStar, AiOutlineStar} from "react-icons/ai";
 import {Link} from 'react-router-dom'
+import {SectionTags} from '../sectionTags/index'
+import {MovieTag} from '../tag/index'
 
-export function MyMoviesContainer({title, note_id, text, rating, totalStars=5, children, ...rest}) {
+export function MyMoviesContainer({title, note_id, text, rating, totalStars=5, data, ...rest}) {
     const renderStars = () => {
         const stars = [];
         for (let i = 1; i <= totalStars; i++) {
@@ -25,7 +27,17 @@ export function MyMoviesContainer({title, note_id, text, rating, totalStars=5, c
             </h3>
             <div>{renderStars()}</div>
             <p>{text}</p>
-            {children}
+
+            <SectionTags>
+              {
+                data.tags && data.tags.length > 0 && data.tags.map((tag, index) => (
+                  <footer key={data.tagsIds[index]}>
+                    <MovieTag title={tag} />
+                  </footer>
+                ))
+              }
+            </SectionTags>
+            
         </Container>
     )
 }

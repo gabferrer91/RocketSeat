@@ -13,6 +13,20 @@ export function CreateMovie() {
     const [name, setName] = useState('')
     const [score, setScore] = useState(0)
     const [observation, setObservation] = useState('')
+    const [tags, setTags] = useState([])
+    const [newTag, setNewTag] = useState("")
+
+    // >>>> tags
+    function handleAddTag(){
+        setTags(prevState => [...prevState, newTag])
+        setNewTag('')
+        console.log(tags)
+    }
+    
+    function handleRemoveTag(deleted){
+        setTags(prevState => prevState.filter(tag => tag!== deleted))
+    }
+    // <<<< tags
 
     function handleNewMovie() {
         if(name === '' || score == '' || observation === '') {
@@ -23,7 +37,8 @@ export function CreateMovie() {
             api.post('/notes/create', {
                 title: name, 
                 rating: score,
-                description: observation
+                description: observation,
+                tags: tags
             })
             alert('Nota de filme criada com sucesso!')
         } catch (error) {
@@ -62,12 +77,24 @@ export function CreateMovie() {
                     onChange={(e) => { setObservation(e.target.value) }}
                 />
                 <p>Marcadores</p>
+                
                 <div className='Markers'>
-                    <Marker title={'Família'} isactive/>
-                    <Marker title={'Ação'} isactive/>
-                    <Marker title={'Aventura'} isactive/>
-                    <Marker title={'Novo marcador'}/>
+                    {
+                        tags.map((tag, index) => {
+                            return <Marker
+                                key={index}
+                                title={tag}
+                                isactive
+                                onClick={() => handleRemoveTag(tag)}
+                            />
+                        })
+                    }
+                    <Marker title={'Novo marcador'}
+                    onChange={(e)=>{setNewTag(e.target.value)}}
+                    onClickAdd={handleAddTag}
+                    />
                 </div>
+
                 <div className='saveBtns'>
                     <Button title={'Excluir filme'}
                     onClick={handleRemoveMovie}

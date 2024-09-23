@@ -1,7 +1,7 @@
 import {styled} from 'styled-components'
 
 
-export const SectionTags = styled.section`
+export const Container = styled.section`
     display: flex;
     margin-top: 8px;
 `

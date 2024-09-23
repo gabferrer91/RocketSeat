@@ -1,26 +1,33 @@
+/* eslint-disable no-unused-vars */
 import {Header} from '../../Components/header'
 import {Button} from '../../Components/button'
-import {FiPlus} from "react-icons/fi";
+import {FiPlus} from "react-icons/fi"
 import {Container} from './styles'
 import {MyMoviesContainer} from '../../Components/movieBlock'
-import {MovieTag} from '../../Components/tag'
-import {SectionTags} from '../../Components/sectionTags'
+// import {MovieTag} from '../../Components/tag'
+// import {SectionTags} from '../../Components/sectionTags'
 import {Link} from 'react-router-dom'
 import {api} from '../../services/api'
 import {useState, useEffect} from 'react'
 
 export function Home() {
     const [titles, setTitles] = useState([])
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState('')
 
     useEffect(() => {
         async function searchMovies() {
             const response = await api.get(`/notes/read?title=${search}`)
-            setTitles(response.data)
+            
+            const movies = response.data.map(movie => ({
+                ...movie,
+                tags: JSON.parse(movie.tags),
+                tagsIds: JSON.parse(movie.tagsIds)
+            }))
+            setTitles(movies)
+            console.log(movies)
         }
         searchMovies()
     }, [search])
-
 
     return (
         <Container>
@@ -36,17 +43,14 @@ export function Home() {
                 <div className='MoviesContainerClass'>
                     {
                         titles && titles.map(title => {
-                            return <MyMoviesContainer 
+                            return <MyMoviesContainer
                             key={title.id}
                             title={title.title}
                             rating={title.rating}
                             text={title.description}
-                            note_id={title.id}                    /*prop definido no movieBlock para ao clicar no titulo o Link de router-dom redirecionar com o note_id no query param e carregar certinho o conteúdo na página MoviePreview*/
+                            note_id={title.id}                
+                            data={title}
                             >
-                                <SectionTags>
-                                <MovieTag title={'Ação'}/>
-                                <MovieTag title={'Ficção'}/>
-                                </SectionTags>
                             </MyMoviesContainer>
                             })
                     }

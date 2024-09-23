@@ -20,7 +20,6 @@ function authenticate(request, response, next) {
     const {authorization} = request.headers              // isso aqui é default do header
 
     if (!authorization) {
-        alert('Token de autenticação ausente.')
         return response.status(401).json({error: 'Token de autenticação ausente.'})
     }
 
@@ -47,7 +46,6 @@ function authenticate(request, response, next) {
 
         return next()
     } catch (error) {
-        alert('Token de autenticação inválido.')
         return response.status(401).json({error: 'Token de autenticação inválido.'})
     }
 }

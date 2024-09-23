@@ -58,6 +58,7 @@ export function Home() {
 
         fetchNotes();
     }, [tagSelected, search])
+
     return(
         <Container>
             <Brand>

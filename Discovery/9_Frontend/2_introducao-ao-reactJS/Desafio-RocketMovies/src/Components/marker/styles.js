@@ -8,7 +8,7 @@ export const Container = styled.button`
     min-width: 113.16px;
     border: none;
     border-radius: 10px;
-    
+
     font-size: 16px;
     margin: auto 0;
     cursor: pointer;
@@ -25,5 +25,12 @@ export const Container = styled.button`
     color: white;
     background-color: ${({theme, $isactive}) => $isactive ? theme.COLORS.BTN_BG : '#000000'};
     border: ${({$isactive}) => $isactive ? 'solid 1px gray' : 'dashed 1px gray'};
+
+    input {
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 16px;        
+    }
 `
 

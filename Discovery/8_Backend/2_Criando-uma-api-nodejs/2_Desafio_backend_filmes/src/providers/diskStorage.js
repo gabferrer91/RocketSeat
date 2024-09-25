@@ -1,19 +1,19 @@
 const fs = require("fs")
 const path = require("path")
-const uploadConfig = require('..//configs/upload')
+const {tmp_folder, uploads_folder} = require('../configs/multer')
 
 
 class diskStorage {
     async saveFile(file) {
         await fs.promises.rename(
-            path.resolve(uploadConfig.tmp_folder, file),            // aonde o file está
-            path.resolve(uploadConfig.uploads_folder, file),        // aonde o file irá
+            path.resolve(tmp_folder, file),            // aonde o file está
+            path.resolve(uploads_folder, file),        // aonde o file irá
         )
         return file
     }
 
     async deleteFile(file) {
-        const filePath = path.resolve(uploadConfig.uploads_folder, file)
+        const filePath = path.resolve(uploads_folder, file)
         console.log('filePath: \n', filePath)
         try {
             await fs.promises.stat(filePath)
@@ -29,5 +29,3 @@ class diskStorage {
 
 
 module.exports = {diskStorage}
-
-

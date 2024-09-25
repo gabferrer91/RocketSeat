@@ -51,6 +51,14 @@ export function AuthProvider({children}) {
         }
     }
 
+    /**
+     * Atualiza o perfil do usu rio logado.
+     * @param {{user: Object, avatarFile: File}} data - objeto com o usuario e o arquivo de avatar
+     * @param {Object} data.user - objeto com as informacoes do usuario
+     * @param {File} data.avatarFile - arquivo do avatar do usuario
+     */
+    
+
     function signOut() {
         localStorage.removeItem("@rocketMovies:token")
         localStorage.removeItem("@rocketMovies:user")

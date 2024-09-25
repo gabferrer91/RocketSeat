@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Navigate} from 'react-router-dom'
 
 
 // app
@@ -7,12 +7,6 @@ import {CreateMovie} from '../pages/CreateMovie'
 import {MoviePreview} from '../pages/MoviePreview'
 import {User} from '../pages/User'
 
-// auth
-/*
-import {SignIn} from '../pages/SignIn'
-import {SignOut} from '../pages/SignOut'
-*/ 
- 
 
 
 export function AppRoutes() {
@@ -22,6 +16,7 @@ export function AppRoutes() {
         <Route path="/CreateMovie" element={<CreateMovie/>}/>
         <Route path="/MoviePreview" element={<MoviePreview/>}/>
         <Route path="/User" element={<User/>}/>
+        <Route path="*" element={<Navigate to="/"/>} />
     </Routes>
     )
 }

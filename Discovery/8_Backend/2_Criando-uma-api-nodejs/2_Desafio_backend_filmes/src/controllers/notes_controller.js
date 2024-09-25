@@ -54,7 +54,8 @@ class notes_controller {
         }
 
         await database.run('delete from movie_notes where id = ?', [note_id])
-        res.send('Nota deletada.')
+        await database.run('delete from movie_tags where note_id = ?', [note_id])
+        res.send('Nota e tags deletadas.')
     }
 
 
@@ -74,8 +75,10 @@ class notes_controller {
           mn.*
         , concat('["', replace(group_concat(mt.name), ',', '","'), '"]') as tags
         , concat('["', replace(group_concat(mt.id), ',', '","'), '"]') as tagsIds
+        , u.name as user_name
         from movie_notes mn 
         left join movie_tags mt on mt.note_id = mn.id
+        left join users u on u.id = mn.user_id
         where 1=1 
         and mn.user_id = ?`
         const params = [user_id]

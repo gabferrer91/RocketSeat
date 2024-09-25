@@ -4,13 +4,15 @@ import {Button} from '../../Components/button'
 import {FiPlus} from "react-icons/fi"
 import {Container} from './styles'
 import {MyMoviesContainer} from '../../Components/movieBlock'
-// import {MovieTag} from '../../Components/tag'
-// import {SectionTags} from '../../Components/sectionTags'
-import {Link} from 'react-router-dom'
+import {Link, Navigate} from 'react-router-dom'
 import {api} from '../../services/api'
 import {useState, useEffect} from 'react'
 
+
+
 export function Home() {
+
+    
     const [titles, setTitles] = useState([])
     const [search, setSearch] = useState('')
 
@@ -28,7 +30,9 @@ export function Home() {
         }
         searchMovies()
     }, [search])
-
+    
+    
+    
     return (
         <Container>
             <Header onSearchChange={(e)=>{setSearch(e)}}/>

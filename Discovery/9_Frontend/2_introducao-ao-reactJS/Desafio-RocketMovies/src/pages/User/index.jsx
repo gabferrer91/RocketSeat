@@ -8,8 +8,10 @@ import {MdMailOutline, MdLockOutline, MdCameraAlt} from "react-icons/md";
 import {Link} from 'react-router-dom'
 import {api} from '../../services/api'
 import {hash, compare} from 'bcryptjs'
-
 import {useState} from 'react'
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
+import {useAuth} from '../../hooks/auth'
+
 
 export function User() {
     const [name, setName] = useState('')
@@ -17,9 +19,49 @@ export function User() {
     const [password, setPassword] = useState('')
     const [newPassword, setNewPassword] = useState('')
 
+    const {user} = useAuth()
+    console.log(user)
+    const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+    const [avatar, setAvatar] = useState(avatarUrl)
+    const [avatarFile, setAvatarFile] = useState(null)
+    console.log(avatarUrl)
+    
+
+    async function handleChangeAvatar(e) {
+        const file = e.target.files[0];
+        if (file) {
+            setAvatarFile(file);
+            const imagePreview = URL.createObjectURL(file);
+            setAvatar(imagePreview);
+            
+            const formData = new FormData();
+            formData.append('avatar', file); // Adicione o arquivo ao FormData
+            
+            const response = await api.patch('/users/avatar', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data' // Configure o cabeçalho adequado
+                }
+            })
+            .catch(error => {
+                console.log('Erro ao atualizar avatar:', error);
+            })
+            user.avatar = response.data.avatar
+            console.log(user)
+            localStorage.setItem('@rocketMovies:user', JSON.stringify({
+                id: user.id,
+                avatar: avatarUrl,
+                created_at: user.created_at,
+                email: email || user.email,
+                name: name || user.name,
+                password: user.password
+            }))
+        }
+    }
+    
+
     async function handleUser() {
         const user = JSON.parse(localStorage.getItem('@rocketMovies:user'))
-        console.log(`nameLocal: ${user.name}, emailLocal: ${user.email}, passwordLocal: ${user.password}`)
+        // console.log(`nameLocal: ${user.name}, emailLocal: ${user.email}, passwordLocal: ${user.password}`)
 
         const comparated = await compare(password, user.password)
 
@@ -27,28 +69,48 @@ export function User() {
             return alert('Senha atual não confere.')
         } 
         if((password && !newPassword) || (!password && newPassword)) {
-            return alert('Para atualizar a senha, digite a senha tanto\n a atual como a nova.')
+            return alert('Para atualizar a senha, digite tanto a senha\n atual como a nova.')
         }
 
-        const finalName = name || user.name
-        const finalEmail = email || user.email
-        const finalPassword = newPassword || user.password
-        
+        if(!password && !newPassword) {
+            try {
+                api.put('/users/update', {
+                    name: name || user.name,
+                    email: email || user.email
+                })
+            localStorage.setItem('@rocketMovies:user', JSON.stringify({
+                id: user.id,
+                avatar: avatarUrl,
+                created_at: user.created_at,
+                email: email || user.email,
+                name: name || user.name,
+                password: user.password
+            }))
+
+            return alert('Perfil atualizado com sucesso!')
+            } catch (error) {
+                console.log(error.response.data)
+                return
+            }
+        }
         try {
             api.put('/users/update', {
-                name: finalName,
-                email: finalEmail,
-                password: finalPassword
+                name: name || user.name,
+                email: email || user.email,
+                password: newPassword
             })
 
-            const hashedPass = await hash(finalPassword, 8)
+            const hashedPass = await hash(newPassword, 8)
             localStorage.setItem('@rocketMovies:user', JSON.stringify({
-                name: finalName,
-                email: finalEmail,
+                id: user.id,
+                avatar: avatarUrl,
+                created_at: user.created_at,
+                email: email || user.email,
+                name: name || user.name,
                 password: hashedPass
             }))
 
-            alert('Perfil atualizado com sucesso!')
+            return alert('Perfil atualizado com sucesso!')
         } catch (error) {
             console.log(error.response.data)
             return alert('Não foi possível atualizar o perfil.')
@@ -67,9 +129,9 @@ export function User() {
 
             <div className="user">
                 <div className="userLogo">
-                    <img src="https://github.com/vihmalmsteen.png" alt="user img"/>
+                    <img src={avatarUrl} alt="user img"/>
                     <label htmlFor="avatar"><MdCameraAlt/></label>
-                        <input type="file" id="avatar"/>
+                        <input type="file" id="avatar" onChange={handleChangeAvatar}/>
                 </div>
 
                 <div className="inputsBlock">

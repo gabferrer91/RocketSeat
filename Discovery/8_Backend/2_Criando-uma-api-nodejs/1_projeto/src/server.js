@@ -32,7 +32,6 @@ app.use((error, req, res, next) => {
             message: error.message
         })
     }
-
     console.error(error)
 
     // response de erro do servidor (500)

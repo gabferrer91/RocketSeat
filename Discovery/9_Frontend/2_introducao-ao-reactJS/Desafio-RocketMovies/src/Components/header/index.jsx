@@ -2,9 +2,19 @@
 import {Container} from './styles'
 import {Link} from 'react-router-dom'
 import {useAuth} from '../../hooks/auth'
-
+import {useState, useEffect} from 'react'
+import {api} from '../../services/api'
 
 export function Header({onSearchChange}) {
+    const [userName, setUserName] = useState('')
+    const [userAvatar, setUserAvatar] = useState('')
+
+    useEffect(() => {
+        const localUser = JSON.parse(localStorage.getItem('@rocketMovies:user'))
+        setUserName(localUser.name)
+        setUserAvatar(`${api.defaults.baseURL}/files/${localUser.avatar}`)
+    }, [])  
+
     const {signOut} = useAuth()
     
     function handleSignOut() {
@@ -20,12 +30,12 @@ export function Header({onSearchChange}) {
             <div>
                 <div>
                     <Link className='hrefLink' to={'/User'}>
-                        <span>Vitor Paiva</span>
+                        <span>{userName}</span>
                     </Link>
                     <a className='signOutLink' onClick={handleSignOut} href='/signin'>sair</a>
                 </div>
                 <Link to={'/User'}>
-                    <img src="https://github.com/vihmalmsteen.png" alt="user img" />
+                    <img src={userAvatar} alt="user img" />
                 </Link>
             </div>
         </Container>

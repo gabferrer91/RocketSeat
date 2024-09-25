@@ -50,10 +50,6 @@ export function CreateMovie() {
         }
     }
 
-    function handleRemoveMovie(){
-        alert('Removido com sucesso!')
-    }
-
     return (
         <Container>
             <div className='PageHeader'>
@@ -96,9 +92,6 @@ export function CreateMovie() {
                 </div>
 
                 <div className='saveBtns'>
-                    <Button title={'Excluir filme'}
-                    onClick={handleRemoveMovie}
-                    />
                     <Button title={'Salvar alterações'}
                     onClick={handleNewMovie}
                     />

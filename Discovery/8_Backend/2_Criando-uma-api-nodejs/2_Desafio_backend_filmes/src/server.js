@@ -15,6 +15,11 @@ app.use(assembled_routes)
 
 const port = 3000
 
+// carregar avatar no insomnia ->>
+const {uploads_folder} = require('./configs/multer')
+app.use('/files', express.static(uploads_folder))
+// <<- carregar avatar no insomnia
+
 app.get('/', (req, res) => {
     console.log('GET at localhost:3000')
     const info = {

@@ -1,4 +1,4 @@
-import {Routes, Route, Navigate} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 
 // app
@@ -16,7 +16,7 @@ export function AppRoutes() {
         <Route path="/CreateMovie" element={<CreateMovie/>}/>
         <Route path="/MoviePreview" element={<MoviePreview/>}/>
         <Route path="/User" element={<User/>}/>
-        <Route path="*" element={<Navigate to="/"/>} />
+        {/* <Route path="*" element={<Navigate to="/"/>} /> */}
     </Routes>
     )
 }

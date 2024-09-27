@@ -1,3 +1,5 @@
+require('dotenv/config')
+
 require('express-async-errors')
 const express = require('express')
 const {connAndMigrate} = require('./database/migrations/connection_and_migrate')
@@ -13,7 +15,7 @@ app.use(cors())
 app.use(express.json())
 app.use(assembled_routes)
 
-const port = 3000
+const port = process.env.SERVER_PORT || 3000
 
 // carregar avatar no insomnia ->>
 const {uploads_folder} = require('./configs/multer')

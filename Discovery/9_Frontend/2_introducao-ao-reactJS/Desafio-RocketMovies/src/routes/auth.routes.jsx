@@ -1,4 +1,4 @@
-import {Routes, Route, Navigate} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 
 // auth
@@ -15,7 +15,7 @@ export function AuthRoutes() {
     <Routes>
         <Route path="/SignIn" element={<SignIn/>}/>
         <Route path="/SignOut" element={<SignOut/>}/>
-        { !user && <Route path="*" element={<Navigate to="/signin"/>} /> }
+        {/* { !user && <Route path="*" element={<Navigate to="/signin"/>} /> } */}
     </Routes>
     )
 }

@@ -9,8 +9,8 @@
  */
 
 const jwtConfig = {
-    secret: 'default',
-    expiresIn: '1d'
+    secret: process.env.AUTH_SECRET || "default",
+    expiresIn: process.env.AUTH_EXPIRATION || "10d"
 }
 
 module.exports = {jwtConfig}

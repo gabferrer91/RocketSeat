@@ -1,3 +1,5 @@
+// fns para remover e inserir fotos de users
+
 const fs = require("fs")
 const path = require("path")
 const {tmp_folder, uploads_folder} = require('../configs/multer')

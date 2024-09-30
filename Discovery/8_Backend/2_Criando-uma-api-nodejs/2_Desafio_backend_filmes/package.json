@@ -4,13 +4,15 @@
   "main": "server.js",
   "scripts": {
     "start": "pm2-runtime start ./src/ecosystem.config.js --env production",
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "jest": "^29.7.0",
     "pm2": "^5.4.2"
   }
 }

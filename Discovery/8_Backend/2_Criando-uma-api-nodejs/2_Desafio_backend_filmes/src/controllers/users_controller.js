@@ -1,8 +1,8 @@
-const {compare, hash} = require('bcryptjs')
+const {hash} = require('bcryptjs')
 const {sqliteConn} = require('../database/db_connection')
 const errorHandler = require('../utils/errorHandler')
-
-
+const {UserRepository} = require('../repositories/user_repository')
+const {UserCreateService} =require('../services/userService')
 
 
 class user_controller {
@@ -10,24 +10,10 @@ class user_controller {
     /* create-> cria usuario */
     async create(req, res) {
         const {name, email, password} = req.body
-        const hashedPass = await hash(password, 8)
-
         const database = await sqliteConn()
-        
-        const emailValidation = await database.get(`select * from users where email = (?)`, [email])
-
-        if(emailValidation) {
-            throw new errorHandler("Email em uso.");
-        }
-
-        if (!name || !email || !password) {
-            throw new errorHandler("Nome, email e senha devem ser informados.");
-        }
-
-        await database.run(`
-            insert into users (name, email, password) values
-            ( ? , ? , ? )`, [name, email, hashedPass])
-        
+        const userRepository = new UserRepository()                          // instancia a classe
+        const userCreateService = new UserCreateService(userRepository)      // passa ela como param de outra classe pra existir no constructor
+        await userCreateService.execute({name, email, password})
         await res.send('User criado.')
     }
 

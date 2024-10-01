@@ -1,0 +1,11 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "pasta 10 server",
+            "database": "${workspaceFolder:RS}/Discovery/10_autenticacao-autorizacao/explorer-stock/api/src/database/database.db"
+        }
+    ]
+}

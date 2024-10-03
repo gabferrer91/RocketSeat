@@ -22,3 +22,4 @@ function verifyUserAuth(roleToVerify) {
 }
 
 module.exports = {verifyUserAuth}
+

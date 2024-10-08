@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* product */
+    --brand-color: #EF5F4C;
+    
+    /* shape */
+    --background-color: #ffffff;
+    --surface-color: #f5f5f5;
+    --skeleton-color: #d9d9d9;
+    --shape-transparency: #ffffff8f;
+
+    /* text */
+    --text-color-primary: #313131;
+    --text-color-secondary: #6c6c6c;
+    --font-family: 'Poppins', sans-serif;
+    --text-lg: bold 32px/125% var(--font-family);    /* weigth size/lineHeight var(--fontFamily) */
+    --text: 16px/150% var(--font-family);
+    --text-md: 14px/175% var(--font-family);
+    --text-sm: 12px/175% var(--font-family);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: var(--brand-color);
+    text-decoration: underline;
+}
+
+
+body {
+    font: var(--text);
+    color: var(--text-color-secondary);
+    background-color: var(--background-color);
+}

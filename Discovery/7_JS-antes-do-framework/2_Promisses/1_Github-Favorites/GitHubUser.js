@@ -14,9 +14,3 @@ export class GithubUser {
 }
 
 
-/*
-outro modo de pegar as infos de data com desestruturação
-.then((data) => {
-            const {login, name, public_repos, followers} = data
-           return {login, name, public_repos, followers}
-*/

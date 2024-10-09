@@ -1,8 +1,5 @@
 import { GithubUser } from './GitHubUser.js'
 
-// classe que vai conter a lógica dos dados
-// como os dados serão estruturados
-
 export class Favorites {
     constructor(root) {
         this.root = document.querySelector(root)
@@ -14,7 +11,7 @@ export class Favorites {
         }
 
     save() {
-        localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))      // transforma um obj JS em string JSON
+        localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))     
     }
 
     async add(username) {
@@ -23,16 +20,14 @@ export class Favorites {
             const userExists = this.entries.find(entry => entry.login === username)
             console.log(userExists)
             if(userExists) {
-                throw new Error("Usuário já cadastrado.")
+                throw new Error("User exists.")
             }
 
             const user = await GithubUser.search(username)
             console.log(user)
-            // console.log("chegou aonde esperava!")
 
             if (user.login===undefined) {
-                // console.log('quando não acha usuario')
-                throw new Error("Usuário não encontrado!");
+                throw new Error("User not found!");
             }
 
             this.entries = [user, ...this.entries]
@@ -54,7 +49,7 @@ export class Favorites {
 
 
 
-// classe que vai criar a visualização e eventos do HTML
+// class to create the html table and events
 export class FavoritesView extends Favorites {
     constructor(root) {
         super(root)

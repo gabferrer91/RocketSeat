@@ -1,0 +1,14 @@
+No head:
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+calendário    <i class="ph ph-calendar-blank"></i>
+pincel        <i class="ph ph-paint-brush-broad"></i>
+usuário       <i class="ph ph-user-rectangle"></i>
+ticket        <i class="ph ph-ticket"></i>
+upload        <i class="ph ph-upload"></i>
+aviso         <i class="ph ph-warning-circle"></i>
+check         <i class="ph ph-check"></i>
+construção    <i class="ph ph-city"></i>
+camera        <i class="ph ph-video-camera"></i>
+

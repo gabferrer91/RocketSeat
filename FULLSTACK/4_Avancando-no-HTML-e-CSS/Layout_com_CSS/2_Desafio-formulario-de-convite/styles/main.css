@@ -1,0 +1,319 @@
+main {
+    justify-content: center;
+    padding: 80px 130px;
+    font-family: var(--body-font-family);
+    text-align: left;
+}
+
+main h1 {
+    font-family: var(--heading-font-family);
+    color: var(--text-heading);
+    margin: 42px auto;
+}
+
+fieldset {
+    border: none;
+}
+
+.about {
+    display: flex; 
+    align-items: center;
+    font-family: var(--body-font-family);
+    color: var(--text-body);
+    font-size: var(--heading-font-size-sm);
+    font-weight: bold;
+}
+
+.ph {
+    color:var(--input-placeholder);
+    font-size: 24px;
+}
+
+.input-wrapper-long {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    font-family: var(--body-font-family);
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: var(--text-body);
+    font-size: var(--body-font-size-sm);
+}
+
+.inputClass {
+    background-color: var(--input-base);
+    border-radius: 8px;
+    border: 1px solid var(--input-stroke);
+    height: 48px;
+    padding-left: 16px;
+    color: var(--input-stroke);
+    &&::placeholder {
+        color: var(--input-placeholder);
+    }
+}
+
+.double-input-wrapper {
+    display: flex;
+    gap: 16px;
+    margin: 16px auto;
+}
+
+.double-input-wrapper .input-wrapper {
+    width: 100%;
+}
+
+input[type="radio"] {
+    /* Isso oculta o input radio */
+    display: none;
+}
+
+.radio-wrapper {
+    display: flex;
+    padding: 3px 3px;
+    cursor: pointer;
+}
+
+.radio-inner:has(:checked) {
+    /* Troca a cor quando selecionar uma opcao no radio input */
+    border-radius: 8px;
+    background-color: var(--input-stroke);
+
+    & .ph {
+        color: var(--brand-light);
+    }
+}
+
+.radio-inner {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.radio-inner, .ph, label {
+    cursor: pointer;
+}
+
+.radio-wrapper {
+    display: flex;
+    gap: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--input-stroke);
+    background-color: var(--input-base);
+    height: 48px;
+}
+
+.radios {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: var(--body-font-family);
+}
+
+.labels {
+    margin-bottom: 8px;
+}
+
+textarea {
+    background-color: var(--input-base);
+    border-radius: 8px;
+    border: 1px solid var(--input-stroke);
+    height: 150px;
+    padding: 8px;
+    color: var(--input-stroke);
+    width: 100%;
+    height: 136px;
+    resize: none;
+    &&::placeholder {
+        color: var(--input-placeholder);
+    }
+}
+
+.paragraf {
+    color: var(--text-body);
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+.colors {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cor {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 6px solid var(--input-stroke);
+}
+
+#cor-1  { cursor: pointer; background-color: var(--brand-light);     &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-2  { cursor: pointer; background-color: var(--brand-mid);       &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-3  { cursor: pointer; background-color: var(--brand-dark);      &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-4  { cursor: pointer; background-color: var(--accent-navy);     &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-5  { cursor: pointer; background-color: var(--accent-purple);   &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-6  { cursor: pointer; background-color: var(--accent-fuschia);  &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-7  { cursor: pointer; background-color: var(--feedback-danger); &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-8  { cursor: pointer; background-color: var(--accent-pink);     &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-9  { cursor: pointer; background-color: var(--accent-orange);   &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-10 { cursor: pointer; background-color: var(--accent-yellow);   &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-11 { cursor: pointer; background-color: var(--accent-lime);     &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-12 { cursor: pointer; background-color: var(--accent-green);    &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+#cor-13 { cursor: pointer; background-color: var(--accent-cyan);     &&:hover, &&:has(:checked) {border: 6px solid rgb(204, 205, 226);} }
+
+.event-themes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 6px;
+}
+
+.event-themes div {
+    border: 1px solid var(--input-stroke);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    text-align: center;
+    &&:hover, &&:has(:checked) {
+        border: 1px solid var(--brand-light);
+    }
+}
+
+.event-themes div img {
+    width: 100%;
+    height: 64px;
+    border-radius: 8px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.event-themes div p {
+    color: var(--text-body);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: var(--body-font-family);
+}
+
+.theme-and-cover {
+    position: relative;
+}
+
+.theme-color {
+    display: flex; 
+    align-items: center;
+    position: absolute;
+    top: 53px;
+    left: 0;
+}
+
+.theme-color p {
+    position: absolute;
+    left: 70px;
+    top: -18px;
+}
+
+.styles-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.file-wrapper input {
+    display: none;
+}
+
+.file-upload-button {
+    background-color: var(--input-stroke);
+    color: white;
+    padding: 10px 20px;
+    width: 120px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative; 
+    & .ph {
+        color: var(--brand-light);
+        padding-right: 4px;
+    }
+}
+
+.file-upload-button .ph {
+    position: absolute;
+    top: 0%;
+    transform: translate(-30%, 40%);
+}
+
+.file-upload-text {
+    color: var(--text-body);
+}
+
+.file-wrapper div {
+    display: flex;
+    width: 400px;
+}
+
+.file-wrapper div span {
+    position: relative;
+    top: -25px;
+    left: 150px;
+}
+
+.acceptances {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 40px auto;
+
+    > div {
+        height: 28px;
+    }
+}
+
+.therms label a {
+    color:var(--brand-light);
+    font-weight: 600;
+}
+
+.button-wrapper input {
+    width: 177px;
+    height: 48px;
+    color: var(--text-body);
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--brand-mid);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    &&:hover {
+        background-color: var(--brand-dark);
+    }
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.submit-div {
+    width: 200px;
+    position: relative;
+}
+
+.button-wrapper .ph {
+    position: absolute;
+    bottom: 13px;
+    left: 15px;
+    z-index: 1;
+    color: var(--text-body);
+}
+

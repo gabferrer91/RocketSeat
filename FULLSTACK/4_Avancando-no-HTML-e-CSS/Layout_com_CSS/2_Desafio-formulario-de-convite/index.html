@@ -1,0 +1,263 @@
+<!-- https://efficient-sloth-d85.notion.site/Desafio-pr-tico-Formul-rio-de-convite-554c54a22b184222ac988d1fa90cb597 -->
+<!-- https://www.figma.com/design/7sIDCGPA5trYn1aiHJ0tLW/Formul%C3%A1rio-de-convite-(Community)?node-id=0-1&node-type=canvas&t=Ik3oqcXFK1Oa3wcZ-0 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Convite</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <script defer src="./script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside>
+        <div class="aside-div">
+            <img id="logo" src="assets/Logo.svg">
+            <h1>Festivite</h1>
+            <h2>Crie um convite digital para o seu evento</h2>
+        </div>
+        <img id="back" src="assets/Background.png">
+    </aside>
+    <main>
+        <h1>Crie seu convite</h1>
+        <form>
+            <fieldset>
+                <div class="about">
+                    <i class="ph ph-calendar-blank"></i>
+                    <p>&nbsp; Sobre o evento</p>
+                </div>
+                <div class="input-wrapper-long">
+                    <label for="title" class="labels">Título</label>
+                    <input class="inputClass" type="text" id="title" placeholder="Nome do evento" required>
+                </div>
+                <div class="double-input-wrapper">
+                    <div class="input-wrapper">
+                        <label for="beg" class="labels">Início</label>
+                        <input class="inputClass" type="date" id="beg" placeholder="Nome do evento" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="end" class="labels">Fim</label>
+                        <input class="inputClass" type="date" id="end" placeholder="Nome do evento" required>
+                    </div>
+                </div>
+                <div class="double-input-wrapper">
+                    <div class="radios">
+                        <label id="main-label-radio" for="radio-wrapper-id" class="labels">Tipo</label>
+                        <div id="radio-wrapper-id" class="radio-wrapper">
+                            <div class="radio-inner">
+                                <input type="radio" name="location" value="Presencial" id="presencialId">
+                                <i class="ph ph-city"></i>&nbsp;
+                                <label for="presencialId">Presencial</label>
+                            </div>
+                        
+                            <div class="radio-inner">
+                                <input type="radio" name="location" value="Online" id="onlineId">
+                                <i class="ph ph-video-camera"></i> &nbsp;
+                                <label for="onlineId">Online</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <label for="local" class="labels">Local</label>
+                        <input class="inputClass" type="text" id="local" placeholder="Nome do evento" required>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <label for="descriptionid" class="labels">Descrição</label>
+                    <textarea name="description" id="descriptionid"></textarea>
+                </div>
+                <div class="about" style="margin-top: 50px; margin-bottom: 26px">
+                    <i class="ph ph-paint-brush-broad"></i>
+                    <p>&nbsp; Personalização</p>
+                </div>
+                
+                <p class="paragraf">Cor principal</p>
+                <div class="colors">
+                    <label for="color-input-1">  <div class="cor" id="cor-1" > <input id="color-input-1"  type="radio" name="color-selector" value="color-input-1"> </div> </label>
+                    <label for="color-input-2">  <div class="cor" id="cor-2" > <input id="color-input-2"  type="radio" name="color-selector" value="color-input-2"> </div> </label>
+                    <label for="color-input-3">  <div class="cor" id="cor-3" > <input id="color-input-3"  type="radio" name="color-selector" value="color-input-3"> </div> </label>
+                    <label for="color-input-4">  <div class="cor" id="cor-4" > <input id="color-input-4"  type="radio" name="color-selector" value="color-input-4"> </div> </label>
+                    <label for="color-input-5">  <div class="cor" id="cor-5" > <input id="color-input-5"  type="radio" name="color-selector" value="color-input-5"> </div> </label>
+                    <label for="color-input-6">  <div class="cor" id="cor-6" > <input id="color-input-6"  type="radio" name="color-selector" value="color-input-6"> </div> </label>
+                    <label for="color-input-7">  <div class="cor" id="cor-7" > <input id="color-input-7"  type="radio" name="color-selector" value="color-input-7"> </div> </label>
+                    <label for="color-input-8">  <div class="cor" id="cor-8" > <input id="color-input-8"  type="radio" name="color-selector" value="color-input-8"> </div> </label>
+                    <label for="color-input-9">  <div class="cor" id="cor-9" > <input id="color-input-9"  type="radio" name="color-selector" value="color-input-9"> </div> </label>
+                    <label for="color-input-10"> <div class="cor" id="cor-10"> <input id="color-input-10" type="radio" name="color-selector" value="color-input-10"> </div> </label>
+                    <label for="color-input-11"> <div class="cor" id="cor-11"> <input id="color-input-11" type="radio" name="color-selector" value="color-input-11"> </div> </label>
+                    <label for="color-input-12"> <div class="cor" id="cor-12"> <input id="color-input-12" type="radio" name="color-selector" value="color-input-12"> </div> </label>
+                    <label for="color-input-13"> <div class="cor" id="cor-13"> <input id="color-input-13" type="radio" name="color-selector" value="color-input-13"> </div> </label>
+                </div>
+                <p class="paragraf">Tema do evento</p>
+                <div class="event-themes">
+                    <label for="theme-1">
+                        <div class="theme-wrapper-1"> 
+                            <input type="radio" name="themes" id="theme-1">
+                            <img src="https://images.unsplash.com/photo-1577998474517-7eeeed4e448a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Aniversário</p>
+                        </div>
+                    </label>
+                    <label for="theme-2">
+                        <div class="theme-wrapper-2">
+                            <input type="radio" name="themes" id="theme-2">
+                            <img src="https://images.unsplash.com/photo-1554727225-ee66ff0a1bc5?q=80&w=1394&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Infantil</p>
+                        </div>
+                    </label>
+                    <label for="theme-3">
+                        <div class="theme-wrapper-3"> 
+                            <input type="radio" name="themes" id="theme-3">
+                            <img src="https://plus.unsplash.com/premium_photo-1683749808307-e5597ac69f1e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Formatura</p>
+                        </div>
+                    </label>
+                    <label for="theme-4">
+                        <div class="theme-wrapper-4"> 
+                            <input type="radio" name="themes" id="theme-4">
+                            <img src="https://plus.unsplash.com/premium_photo-1678834778658-9862d9987dd3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Casamento</p>
+                        </div>
+                    </label>
+                    <label for="theme-5">
+                        <div class="theme-wrapper-5"> 
+                            <input type="radio" name="themes" id="theme-5">
+                            <img src="https://plus.unsplash.com/premium_photo-1677654190250-e9a946a29a5a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Chá de bebê</p>
+                        </div>
+                    </label>
+                    <label for="theme-6">
+                        <div class="theme-wrapper-6"> 
+                            <input type="radio" name="themes" id="theme-6">
+                            <img src="https://images.unsplash.com/photo-1556910096-6f5e72db6803?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Chá de panela</p>
+                        </div>
+                    </label>
+                    <label for="theme-7">
+                        <div class="theme-wrapper-7"> 
+                            <input type="radio" name="themes" id="theme-7">
+                            <img src="https://plus.unsplash.com/premium_photo-1700869225346-752b3363a8d6?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Carnaval</p>
+                        </div>
+                    </label>
+                    <label for="theme-8">
+                        <div class="theme-wrapper-8"> 
+                            <input type="radio" name="themes" id="theme-8">
+                            <img src="https://plus.unsplash.com/premium_photo-1677606179805-65a7342e9ab1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Páscoa</p>
+                        </div>
+                    </label>
+                    <label for="theme-9">
+                        <div class="theme-wrapper-9"> 
+                            <input type="radio" name="themes" id="theme-9">
+                            <img src="https://images.unsplash.com/photo-1655770926081-66ec8decf028?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>São João</p>
+                        </div>
+                    </label>
+                    <label for="theme-10">
+                        <div class="theme-wrapper-10">
+                            <input type="radio" name="themes" id="theme-10">
+                            <img src="https://images.unsplash.com/photo-1603252657769-b02e019cc479?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Halloween</p>
+                        </div>
+                    </label>
+                    <label for="theme-11">
+                        <div class="theme-wrapper-11">
+                            <input type="radio" name="themes" id="theme-11">
+                            <img src="https://images.unsplash.com/photo-1639109053131-5e97d2041e68?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Natal</p>
+                        </div>
+                    </label>
+                    <label for="theme-12">
+                        <div class="theme-wrapper-12">
+                            <input type="radio" name="themes" id="theme-12">
+                            <img src="https://images.unsplash.com/photo-1628336707631-68131ca720c3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"> 
+                            <p>Outro</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="styles-wrapper">
+                    <div class="theme-and-cover">
+                        <p class="paragraf">Estilo</p>
+                        <div class="theme-color">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                                <p class="paragraf">Escuro</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="file-wrapper">
+                        <p class="paragraf">Foto de capa</p>
+                        <label for="file-upload" class="file-upload-button">
+                            <i class="ph ph-upload"></i>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Selecionar</span>
+                        </label>
+                        <div>
+                            <input id="file-upload" type="file" class="file-upload" />
+                            <span id="file-upload-text" class="file-upload-text">Nenhum arquivo selecionado</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about" style="margin-top: 50px; margin-bottom: 26px">
+                    <i class="ph ph-user-rectangle"></i>
+                    <p>&nbsp; Dados para contato</p>
+                </div>
+                <div class="input-wrapper-long">
+                    <label for="person-name" class="labels">Nome da pessoa</label>
+                    <input class="inputClass" type="text" id="person-name" placeholder="Nome completo" required>
+                </div>
+                <div class="double-input-wrapper">
+                    <div class="input-wrapper">
+                        <label for="mail" class="labels">E-mail</label>
+                        <input class="inputClass" type="email" id="mail" placeholder="exemplo@email.com" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="phone" class="labels">Telefone</label>
+                        <input class="inputClass" type="tel" id="phone" placeholder="(99) 99999-9999" required>
+                    </div>
+                </div>
+                <hr style="border: 0.5px solid #d4d4d452; margin-top: 40px">
+                <div class="acceptances">
+                    <div class="therms">
+                        <div class="checkbox-wrapper-40">
+                            <label>
+                              <input type="checkbox" required/>
+                              <span class="checkbox">Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a></span>
+                            </label>
+                          </div>
+                    </div>
+                    <div class="promos">
+                        <div class="checkbox-wrapper-40">
+                            <label>
+                              <input type="checkbox"/>
+                              <span class="checkbox">Aceito receber atualizações e promoções por e-mail</span>
+                            </label>
+                          </div>
+                    </div>
+                    <div class="sms-updates">
+                        <div class="checkbox-wrapper-40">
+                            <label>
+                              <input type="checkbox"/>
+                              <span class="checkbox">Aceito receber atualizações e promoções por SMS</span>
+                            </label>
+                          </div>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="submit-div">
+                        <i class="ph ph-ticket"></i>
+                        <input class="btn" type="submit" value= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gerar convite">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
+

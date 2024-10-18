@@ -1,0 +1,50 @@
+body {
+    display: grid;
+    grid-template-columns: 32.8% 67.2%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#back {
+    height: 100vh;
+    width: 100%;
+    object-fit: fill;
+}
+
+main {
+    overflow-y: auto;
+}
+
+#app aside {
+    position: relative;
+    z-index: -1;
+}
+
+.aside-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 16px 32px 32px;
+}
+
+.aside-div h1 {
+    font-family: var(--logo-font-family);
+    font-size: var(--logo-font-size);
+    color: var(--accent-pink);
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+
+.aside-div h2 {
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size-md);
+    color: var(--text-heading);
+    font-weight: lighter;
+}
+
+.input-wrapper-long input,
+.input-wrapper input,
+#descriptionid
+{
+    color: var(--input-placeholder);
+}

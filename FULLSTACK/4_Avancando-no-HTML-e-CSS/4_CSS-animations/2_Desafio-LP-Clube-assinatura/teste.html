@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito CSS no Botão</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .btn {
+            position: relative;
+            padding: 10px 20px;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #007BFF;
+            cursor: pointer;
+            transition: color 0.4s ease; /* Transição da cor do texto */
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2); /* Cor do efedddddddddddddddddddddddito */
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 1s ease; /* Transição do efeito */
+            z-index: 0; /* Para que fique atrás do texto */
+        }
+
+        .btn:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .btn:hover {
+            color: #007BFF; /* Cor do texto ao passar o mouse */
+        }
+
+        .btn span {
+            position: relative; /* Para garantir que o texto fique sobre o efeito */
+            z-index: 1; /* Para que o texto fique acima do efeito */
+        }
+    </style>
+</head>
+<body>
+    <button class="btn"><span>Hover me!</span></button>
+</body>
+</html>

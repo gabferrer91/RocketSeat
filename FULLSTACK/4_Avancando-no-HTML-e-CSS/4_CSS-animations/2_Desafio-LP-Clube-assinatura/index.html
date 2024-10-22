@@ -1,0 +1,210 @@
+<!-- https://efficient-sloth-d85.notion.site/Desafio-pr-tico-LP-clube-de-assinatura-44d75840f9274bcf93ec47cf29cb461b#95799a0e54d74102a92488e874a2a643 -->
+<!-- https://www.figma.com/design/3glYQCJaXlAmIP4NgRxJmS/LP-de-Clube-de-Assinatura-(Community)?node-id=0-1&node-type=canvas&t=sQzV6VXWKmiChktm-0 -->
+
+<!-- animacao do projeto -->
+<!-- https://www.figma.com/proto/gJxpX4qg7gC2JJvj5HuJUf/LP-de-Clube-de-Assinatura?page-id=3%3A376&node-id=3244-2424&viewport=98%2C123%2C0.22&t=4ntEXiWvJE129pfE-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=3244%3A2424&hide-ui=1 -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encantos Literários</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    
+    <div class="first-section">
+        <img id="background-book" src="./assets/hero-background.png" alt="magic-book-bg">
+        <header>
+            <div class="header-wrapper">
+                <div class="img-div"></div>
+                <button class="btn"><span>Assinar</span></button>
+            </div>
+        </header>
+    </div>
+
+
+    <main>
+        <div class="intro">
+            <h1>
+                Desperte a sua imaginação<br>e explore novos mundos
+            </h1>
+
+            <p>
+                Junte-se ao clube de assinatura Encantos Literários e<br>descubra maravilhas e aventuras a cada página
+            </p>
+            
+            <div class="second-section">
+                    <img id="mis-1" src="./assets/mystery-opened-spellbook.png" alt="spellbook">
+                    <img id="mis-2" src="./assets/mystery-ouija-planchette.png" alt="planchette">
+                    <img id="mis-3" src="./assets/mystery-crystal-ball.png" alt="crystal-ball">
+                
+                <h2>
+                    <span id="span-h2-1">Receba todo mês um </span>
+                    <span id="highlight-1">livro surpresa</span> 
+                    <span id="span-h2-2">do seu tema favorito, acompanhado de<br></span>
+                    <span id="highlight-2">brindes exclusivos</span> 
+                    <span id="span-h2-3">que tornarão a sua experiência literária </span>
+                    <span id="highlight-3">encantadora</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="monthly-kit">
+
+            <div class="kit">
+                <img src="./assets/star.svg" alt="dot star">
+                <p>Conheça o kit mensal</p>
+                <img src="./assets/star.svg" alt="dot star">
+            </div>
+
+            <p>Receba uma caixa surpresa todos os meses</p>
+
+            <div class="imgs">
+                <div id="img-1">
+                    <img style="z-index: 1;" src="./assets/arrow-down-left.png">
+                    <p>Marca páginas temático</p>
+                </div>
+                <div id="img-2">
+                    <p>Livro em capa dura</p>
+                    <img id="img-2" style="z-index: 2;" src="./assets/arrow-left.png">
+                </div>
+                <div id="img-3">
+                    <p>Broche exclusivo</p>
+                    <img style="z-index: 3;" src="./assets/arrow-up.png">
+                </div>
+                <img id="img-4" style="z-index: 4;" src="./assets/coins.png">
+                <img id="img-5" style="z-index: 5;" src="./assets/flier-1.png">
+                <img id="img-6" style="z-index: 6;" src="./assets/flier-2.png">
+                <img id="img-7" style="z-index: 7;" src="./assets/castle-book.png">
+            </div>
+        </div>
+
+        <div class="prices">
+            <h1>Assinatura<br>Encantos Literários</h1>
+
+            <div class="cards">
+
+                <div id="card-monthly" class="card">
+                    <div class="card-top">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h1 style="font-size: var(--title-xs); color: var(--blue-light);">
+                                Mensal
+                            </h1>
+                            <div class="pop" style="display: none" id="pop-1">popular</div>
+                        </div>
+                        <p>
+                            <span style="color: white; font-size: var(--title-md);">R$ 59,90</span>
+                            <span style="color: white; font-size: var(--title-xs);">/mês</span>
+                        </p>
+                        <p style="color: var(--text-label); font-size: var(--body-sm);">
+                            <span>R$ 718,80</span>
+                            <span>/ano</span>
+                        </p>
+                    </div>
+                    <div class="goods">
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star.svg"> Kit mensal com livro temático</span>
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star.svg"> Broche e marca páginas exclusivo</span>
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star.svg"> Acesso à comunidade literária</span>
+                        <button id="sine-sub-1" class="sine-sub">
+                            Assinar mensal
+                        </button>
+                    </div>
+                </div>
+
+                <div id="card-semestral" class="card">
+                    <div class="card-top">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h1 style="font-size: var(--title-xs); color: var(--blue-light);">
+                                Semestral
+                            </h1>
+                            <div class="pop" id="pop-2">popular</div>
+                        </div>
+                        <p>
+                            <span style="color: white; font-size: var(--title-md);">R$ 52,90</span>
+                            <span style="color: white; font-size: var(--title-xs);">/mês</span>
+                        </p>
+                        <p style="color: var(--text-label); font-size: var(--body-sm);">
+                            <span>R$ 634,80</span>
+                            <span>/ano</span>
+                        </p>
+                    </div>
+                    <div class="goods">
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star-purple.svg"> Kit mensal com livro temático</span>
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star-purple.svg"> Broche e marca páginas exclusivo</span>
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star-purple.svg"> Acesso à comunidade literária</span>
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star-purple.svg"> Membro premium do clube</span>
+                        <button id="sine-sub-2" class="sine-sub">
+                            Assinar semestral
+                        </button>
+                    </div>
+                </div>
+
+                <div id="card-anual" class="card">
+                    <div class="card-top">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h1 style="font-size: var(--title-xs); color: var(--blue-light);">
+                                Anual
+                            </h1>
+                            <div class="pop" style="display: none" id="pop-3">popular</div>
+                        </div>
+                        <p>
+                            <span style="color: white; font-size: var(--title-md);">R$ 48,90</span>
+                            <span style="color: white; font-size: var(--title-xs);">/mês</span>
+                        </p>
+                        <p style="color: var(--text-label); font-size: var(--body-sm);">
+                            <span>R$ 586,80</span>
+                            <span>/ano</span>
+                        </p>
+                    </div>
+                    <div class="goods">
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star.svg"> Kit mensal com livro temático</span>
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star.svg"> Broche e marca páginas exclusivo</span>
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star.svg"> Acesso à comunidade literária</span>
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star.svg"> Membro premium do clube</span>
+                        <span> <img style="width: 14px; height:14px;" src="./assets/star.svg"> Planner anual de leituras</span>
+                        <button id="sine-sub-3" class="sine-sub">
+                            Assinar anual
+                        </button>
+                    </div>
+                </div>
+            </div>     
+        </div>
+
+        <div class="footer">
+            <div class="container-1">
+                <img src="./assets/logo-horizontal.svg">
+                <div class="line"></div>
+                <div class="logos">
+                    <a href=""> <img src="./assets/instagram.svg"> </a>
+                    <a href=""> <img src="./assets/twitter.svg"> </a>
+                    <a href=""> <img src="./assets/facebook.svg"> </a>
+                    <a href=""> <img src="./assets/discord.svg"> </a>
+                    <a href=""> <img src="./assets/whatsapp.svg"> </a>
+                    <a href=""> <img src="./assets/mail.svg"> </a>
+                </div>
+            </div>
+
+            <div class="container-2">
+                <div class="subcontainer-1">
+                    <p>Conteúdos</p>
+                    <a href="#">Kits passados</a>
+                    <a href="#">Clube de membros</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="subcontainer-2">
+                    <p>Ajuda</p>
+                    <a href="#">Central de ajuda</a>
+                    <a href="#">Regulamentos</a>
+                    <a href="#">Suporte</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

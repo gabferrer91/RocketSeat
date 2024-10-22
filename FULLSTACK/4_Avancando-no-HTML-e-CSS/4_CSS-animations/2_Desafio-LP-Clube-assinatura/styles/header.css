@@ -1,0 +1,81 @@
+.img-div {
+    background-image: url(../assets/logo-horizontal.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 230px;
+    height: 58px;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    margin: 56px 10% 160px 10%;
+}
+
+.btn {
+    font-family: var(--font-family);
+    border-radius: 8px;
+    background-color: var(--pink-dark);
+    border: none;
+    cursor: pointer;
+    width: 90px;
+    height: 40px;
+    font-size: var(--button);
+    font-weight: var(--button-weight);
+    color:var(--text-body);
+    transition: all 0.3s;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: var(--pink-base); /* Cor do efeito */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.8s ease; /* Transição do efeito */
+    z-index: 0; /* Para que fique atrás do texto */
+}
+
+.btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn span {
+    position: relative; /* Para garantir que o texto fique sobre o efeito */
+    z-index: 1; /* Para que o texto fique acima do efeito */
+}
+
+
+/* animacao */
+#background-book {
+    opacity: 0;
+    animation: logo-appear 2s ease forwards;
+}
+
+header {
+    opacity: 0;
+    animation: logo-appear 3s ease forwards;
+}
+
+main {
+    opacity: 0;
+    animation: logo-appear 4s ease forwards;
+}
+
+@keyframes logo-appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

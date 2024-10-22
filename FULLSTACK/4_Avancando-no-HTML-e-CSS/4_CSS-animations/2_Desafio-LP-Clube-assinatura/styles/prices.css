@@ -1,0 +1,112 @@
+.prices {
+    margin-top: 700px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    position: relative;
+    width: 100vw;
+    height: 416px;
+}
+
+.card {
+    width: 288px;
+    height: 416px;
+    border-radius: 8px;
+    background-color: var(--shape-base);
+    border: 1px solid var(--shape-stroke);
+    padding: 32px 32px 28px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    transition: all 0.5s ease;
+    position: absolute;
+    &:hover {
+        background-color: var(--shape-hover);
+        z-index: 2;
+        transition: all 0.5s ease;
+    }
+}
+
+.goods {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 12px;
+    & > span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--text-label);
+        font-size: var(--body-xs);
+    }
+}
+
+.card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+
+    & > p:nth-child(2) {
+        margin-top: 16px;
+    }
+}
+
+.pop {
+    color: var(--text-body);
+    font-size: var(--tag);
+    background-color: var(--shape-stroke);
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 90px;
+    height: 30px;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sine-sub {
+    border-radius: 8px;
+    border: none;
+    background-color: var(--blue-dark);
+    color: white;
+    max-width: 224px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#sine-sub-2 {
+    background-color: var(--pink-base);
+}
+
+.cards:hover #card-monthly { animation: spread-cards-monthly 1s ease forwards; }
+.cards:hover #card-monthly { animation: spread-cards-monthly 1s ease forwards; }
+.cards:not(:hover) #card-monthly { animation: unspread-cards-monthly 1s ease forwards; }
+
+
+@keyframes spread-cards-monthly {
+    100% { transform: translateX(-100%) translateY(10%) rotate(-10deg); }
+}
+@keyframes unspread-cards-monthly {
+    from { transform: translateX(-100%) translateY(10%) rotate(-10deg); }
+    to { transform: translateX(0%) translateY(0%) rotate(0deg); }
+}
+
+.cards:hover #card-anual { animation: spread-cards-anual 1s ease forwards; }
+.cards:not(:hover) #card-anual { animation: unspread-cards-anual 1s ease forwards; }
+
+@keyframes spread-cards-anual {
+    100% { transform: translateX(100%) translateY(10%) rotate(10deg); }
+}
+@keyframes unspread-cards-anual {
+    from { transform: translateX(100%) translateY(10%) rotate(10deg); }
+    to { transform: translateX(0%) translateY(0%) rotate(0deg); }
+}
+

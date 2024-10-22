@@ -1,0 +1,16 @@
+@media screen and (max-width: 425px) {
+    
+    .img-div {
+        background-image: url(../assets/logo-symbol.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 40px;
+        margin: 0;
+        margin-left: 5px;
+    }
+
+    
+
+}
+

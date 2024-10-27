@@ -1,0 +1,23 @@
+.logo {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    grid-area: part-1;
+
+    > h1 {
+        font-family: var(--font-family-sora-display);
+        font-size: 1.4rem;
+        font-weight: var(--fw-display-lg);
+        text-transform: var(--tt-display-lg);
+        line-height: var(--lh-display-lg);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .logo {
+        justify-content: center;   
+    }
+}
+

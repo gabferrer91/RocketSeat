@@ -1,0 +1,47 @@
+.explanation {
+    /* border: 1px solid yellow; */
+    grid-area: part-4;
+    margin-top: 3.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.6rem;
+    max-width: 35rem;
+}
+
+
+.explanation h3 {
+    font-family: var(--font-family-roboto-flex-p-label);
+    font-size: var(--fs-paragraph-sm);
+    color: var(--content-brand);
+    position: relative;
+    line-height: 150%;
+}
+
+.explanation p {
+    font-family: var(--font-family-roboto-flex-p-label);
+    font-size: var(--fs-paragraph-sm);
+    color: var(--content-secondary);
+    line-height: 150%;
+    position: relative;
+}
+
+
+.explanation h3::before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background-image: url(../../assets/icons/person.svg);
+    background-repeat: no-repeat;
+    color: var(--content-brand);
+    margin-right: 1rem;
+    position: absolute;
+    top: 0;
+    left: -35px;
+}
+
+.explain {
+    display: flex;
+    flex-direction: column;
+ 
+}

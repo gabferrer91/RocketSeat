@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    /* cores */
+    --content-primary: #ffffff;
+    --content-secondary: #98959D;
+    --content-tertiary: #666666;
+    --content-brand: #9282FA;
+    --background-primary: #151515;
+    --background-secondary: #2E2C30;
+    --background-tertiary: #23242C;
+    --background-brand: #9282FA;
+    --background-highlights: #BDB4FA;
+    --border-primary: #3E3C41;
+    --border-secondary: #86818C;
+    --border-brand: #9282FA;
+    --border-divisor: #353339;
+    --accent-blue: #027DF0;
+    --accent-blue-light: #16487A;
+    --accent-yellow: #F0DC02;
+    --accent-yellow-light: #756E1B;
+    --accent-orange: #F09102;
+    --accent-orange-light: #75501B;
+    --ff-inter: "Inter", sans-serif;
+    --ff-inter-tight: "Inter Tight", serif;
+}
+
+body {
+    background-color: var(--background-primary);
+    font-family: var(--ff-inter);
+    color: var(--content-primary);
+    font-size: 1.4rem;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.app {
+    place-items: center;
+}
+
+
+@media screen and (max-width: 423px) {
+    .main {
+        padding: 1.5rem;
+    }
+}

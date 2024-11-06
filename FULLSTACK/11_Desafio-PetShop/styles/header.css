@@ -1,0 +1,84 @@
+.header-text h1 {
+    font-weight: bold;
+    font-family: var(--ff-inter-tight);
+    font-size: 2.4rem;
+}
+
+.header-text p {
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+    color: var(--content-secondary);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    height: 4rem;
+    position: relative;
+    gap: 1rem;
+    cursor: pointer;
+    &:focus-within {
+        border: 1px solid var(--border-secondary);
+    }
+}
+
+#img-calendar {
+    position: absolute;
+    left: 0.5rem;
+}
+
+.input-wrapper input {
+    all: unset;
+    margin-left: 3rem;
+    margin-right: 0.6rem;
+    font-family: var(--ff-inter);
+    font-size: 1.4rem;
+    font-weight: lighter;
+    max-width: 10.5rem;
+}
+
+#img-icon {
+    position: absolute;
+    right: 0.3rem;
+    pointer-events: none;
+    background-color: var(--background-primary);
+    padding-right: 0.5rem;
+}
+
+
+/* esconder o calendario padrao do input tipo date (mas desativa a caixa do calendario) */
+/* input[type="date"]::-webkit-inner-spin-button, */
+/* input[type="date"]::-webkit-calendar-picker-indicator { */
+    /* display: none; */
+    /* -webkit-appearance: none; */
+/* } */
+
+
+
+@media screen and (max-width: 426px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 6rem;
+    }
+
+    .header-text p {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .input-wrapper {
+        margin-bottom: 2rem;
+    }
+}
+
+

@@ -1,0 +1,105 @@
+.morning,
+.afternoon, 
+.night {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.schedule-wrapper, 
+.service-wrapper, 
+.btn-wrapper {
+    margin: 1rem 0;
+}
+
+
+
+/* TOP LABELS */
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-secondary);
+    border-radius: 8px 8px 0 0;
+    border-bottom: 2px solid var(--content-tertiary);
+    padding: 1rem;
+
+    > .wrapper {
+        display: flex;
+        gap: 1rem;
+
+        > h2 {
+            font-family: var(--ff-inter-tight);
+            font-weight: bold;
+            font-size: 1.6rem;
+        }
+    }
+
+    > span {
+        font-size: 1.4rem;
+        color: var(--content-secondary);
+    }
+}
+
+
+
+
+/* SCHEDULES */
+
+.person {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--content-tertiary);
+}
+
+#bar, #owner-name, #service, .btn-rm-schedule {
+    color: var(--content-tertiary);
+}
+
+.people .person:last-child {
+    border: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.btn-rm-schedule {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--content-brand);
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 426px) {
+    .person {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1.2rem;
+        
+    }
+
+    .btn-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btn-rm-schedule {
+        font-size: 1.2rem;
+    }
+
+    .schedule-wrapper, .service-wrapper, .btn-wrapper {
+        margin: 0.5rem 0;
+    }
+}
+

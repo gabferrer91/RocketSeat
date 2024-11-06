@@ -1,0 +1,158 @@
+.form-wrapper {
+    width: 50%;
+    max-width: 500px;
+    /* align-self: center; */
+}
+
+.form-top-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > img {
+        cursor: pointer;
+    }
+}
+
+fieldset {
+    border: none;
+    border-radius: 8px;
+    background-color: var(--background-secondary);
+    padding: 4rem;
+    margin: 3rem auto;
+    > p {
+        margin: 1rem auto;
+        font-family: var(--ff-inter-tight);
+        font-size: 1.6rem;
+        line-height: 3rem;
+        color: var(--content-tertiary);
+    }
+}
+
+#form-owner-name, #form-pet-name, #form-phone, #description, #form-date, #form-hour {
+    background-color: var(--background-secondary);
+    color: var(--content-tertiary);
+}
+
+/* aqui */
+.form-input-wrapper {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.img-input-wrapper {
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.img-input-wrapper input {
+    height: 3rem;
+    padding-left: 1rem;
+    border: none;
+    width: 100%;
+}
+
+.img-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    height: 4rem;
+    &:focus-within {
+        border: 1px solid var(--border-secondary);
+    }
+    input:focus {
+        outline: none;
+    }
+}
+
+.time-schedule-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#form-description {
+    display: flex;
+    flex-direction: column;
+    
+    > textarea {
+        resize: none;
+        border: 1px solid var(--border-primary);
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        height: 10rem;
+        margin-top: 1rem;
+        &:focus-within {
+            border: 1px solid var(--border-secondary);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.form-input-wrapper-datetime {
+    width: 50%;
+    margin: 2rem 0 4rem 0;
+}
+
+.form-input-wrapper-datetime .img-input-wrapper {
+    position: relative;
+}
+
+.form-input-wrapper-datetime .img-input-wrapper img:last-child {
+    position: absolute;
+    right: 1rem;
+    background-color: var(--background-secondary);
+    pointer-events: none;
+}
+
+#schedule-service {
+    float: right;
+    width: 12rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    background-color: var(--content-brand);
+
+    &:hover {
+        box-shadow: var(--background-highlights) 0px 1px 5px, 
+                    var(--background-highlights) 0px -1px 3px, 
+                    var(--background-highlights) 0px 1px 6px, 
+                    var(--background-highlights) 0px 1px 3px, 
+                    var(--background-highlights) 0px -3px 5px;
+    }
+    transition: all 0.2s;
+}
+
+
+
+@media screen and (max-width: 426px) {
+    .form-wrapper {
+        margin-top: 7rem;
+        width: 320px;
+        max-width: 320px;
+    }
+    
+    .form-wrapper * {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    .form-top-wrapper h2 {
+        font-size: 1.6rem;
+    }
+
+    fieldset {
+        padding: 2rem;
+        margin: 0;
+    }
+
+    .img-input-wrapper input {
+        font-size: 1rem;
+    }
+}

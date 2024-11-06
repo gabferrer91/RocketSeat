@@ -1,0 +1,22 @@
+{
+  "schedules": [
+    {
+      "id": "1730851185850",
+      "ownerName": "Vitor",
+      "petName": "Chocolate",
+      "phone": "(21) 9 8873-4547",
+      "description": "Banho e tosa.",
+      "date": "2024-11-21",
+      "time": "15:59"
+    },
+    {
+      "id": "1730859972535",
+      "ownerName": "Luiz",
+      "petName": "Nicorete",
+      "phone": "(21) 6 6666-6666",
+      "description": "Limpar rosca",
+      "date": "2024-11-05",
+      "time": "15:30"
+    }
+  ]
+}
